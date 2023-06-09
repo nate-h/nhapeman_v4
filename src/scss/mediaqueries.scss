@@ -1,0 +1,26 @@
+///////////////////////////////////////////////////////////////////////////////
+// Media query variables
+///////////////////////////////////////////////////////////////////////////////
+
+$small: rem-calc(320);
+$medium: rem-calc(768);
+$large: rem-calc(1280);
+$x-large: rem-calc(1440);
+
+
+$break-large: 900px;
+
+
+@function rem-calc($size) {
+    $rem-size: $size / 16;
+    @return #{$rem-size} rem;
+}
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+    'small': 320px,
+    'medium': 768px,
+    'large': 1024px,
+) !default;

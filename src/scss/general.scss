@@ -1,0 +1,123 @@
+@import "main.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $text-font-stack;
+    font-size: 62.5%;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-image: url('../assets/bg.png');
+    color: $dark1;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+// Basic styles for links
+a {
+    color: $color2;
+    text-decoration: none;
+}
+
+.router-link {
+    @extend %router-link;
+}
+
+@for $i from 1 through length($heading-sizes) {
+    h#{$i} {
+        font-size: $heading-sizes($i);
+    }
+}
+
+h1 {color: $color1;}
+h2 {color: $color2;}
+h3 {color: $color3;}
+
+h1, h2, h3, h4, h5 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+}
+
+p, ul, ol, li, td, input, button, label {
+    @extend %default-size;
+}
+
+/////////////////////////////////////////////////////////////////////
+// General Resuable Rules.
+/////////////////////////////////////////////////////////////////////
+
+
+// See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.trace {
+    border: 1px dashed rgba(254, 1, 1, 0.9);
+}
+
+.l-to-r {@extend %l-to-r;}
+.r-to-l {@extend %r-to-l;}
+.t-to-b {@extend %t-to-b;}
+.b-to-t {@extend %b-to-t;}
+
+
+.center {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.spread {
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Text
+/////////////////////////////////////////////////////////////////////
+
+.centered {
+    margin: $margin 0;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}

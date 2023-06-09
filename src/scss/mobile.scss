@@ -1,0 +1,110 @@
+///////////////////////////////////////////////////////////////////////////////
+// Mobile main media query
+// Incorporate one day?
+///////////////////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: $breakpointMain) {
+
+    // Ensure no increased font sizes
+    body {
+        @include text-size-adjust(none);
+
+        // font-size: $baseFontSize;
+    }
+
+    // Responsive grids
+    %#{$row-notation},
+    body,
+    .container,
+    button,
+    textarea,
+    input,
+    img,
+    nav ul li {
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 0;
+
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 $padding; //allow padding to the side of the container
+        @for $i from 1 through $num-cols {
+            %#{$row-notation} {
+                %#{col-name($i)}, %#{col-name($i)}:last-child {
+                    float: none;
+                    margin-left: 0;
+                    margin-right: 0;
+                    position: static !important;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    %hidden-phone {
+        display: none;
+    }
+
+    .container %show-phone,
+    button {
+        display: block;
+    }
+
+    button {
+        text-align: center;
+    }
+
+    // Responsive buttons - vertically-stacked
+    .form-actions {
+        button {
+            margin: - #{$margin-mini} 0 0 0; //buttons don't show double borders
+        }
+    }
+
+    // Responsive navigation
+    nav {
+        border-bottom: $border-width $border-style $border-color;
+    }
+
+    nav ul {
+        li {
+            a {
+                border-bottom: $border-width $border-style $border-color;
+                border-left: 0;
+                border-right: 0;
+                display: block;
+                margin: 0;
+            }
+
+            ul, ul ul {
+                @include opacity(1);
+
+                border: 0;
+                display: block;
+                font-size: 85%;
+                margin: 0;
+                position: static;
+                visibility: visible;
+
+                a {
+                    text-indent: 3%;
+                }
+            }
+        }
+    }
+
+    //forms at full screen width
+    input:not([type]),
+    input[type='color'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='tel'],
+    input[type='url'],
+    input[type='text'],
+    textarea {
+        width: $row-width;
+    }
+}
