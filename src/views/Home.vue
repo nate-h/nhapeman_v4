@@ -11,8 +11,11 @@
         years="July 2021 - Present"
         short-description="Software Engineer"
       >
-        <p>Fullstack engineering on a quantum device testing program.</p>
-        <p>Secret security clearance.</p>
+        <ul>
+          <li>Full Stack engineering on a quantum device testing program</li>
+          <li>TS / SCI</li>
+        </ul>
+        <p></p>
       </job-container>
       <job-container
         company="Applied Invention"
@@ -83,6 +86,10 @@ const links = [
     .job-container:not(:last-child) {
       margin-bottom: $margin-large;
     }
+  }
+
+  ul {
+    list-style-position: inside;
   }
 }
 

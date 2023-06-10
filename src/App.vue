@@ -19,7 +19,6 @@ import MyFooter from './components/MyFooter.vue'
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: red;
 
   .nav-bar {
     flex: 0 0 auto;
