@@ -2,7 +2,7 @@
     <div class="job-container l-to-r lt">
         <!-- Content inserted here! -->
         <div class="left">
-            <img :src="img" />
+            <img :src="getImageUrl(img)" />
         </div>
         <div class="right">
             <h2>
@@ -18,14 +18,21 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "JobContainer",
-    data() {
-        return {};
-    },
-    props: ["company", "img", "link", "years", "short-description"],
-};
+<script setup lang="ts">
+
+const getImageUrl = (name: string) => {
+    return new URL(props.img, import.meta.url).href
+}
+
+const props = defineProps<{
+    company: string,
+    img: string,
+    link: string,
+    years: string,
+    shortDescription: string
+}>()
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

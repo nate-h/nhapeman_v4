@@ -11,7 +11,7 @@
                     different domains including: machine learning, fullstack
                     development, simulation and game development. The computer
                     languages I have the most experience with are c/c++, python
-                    and javascript but have coded for fun and professionaly in
+                    and javascript but have coded for fun and professionally in
                     many more. Outside of my professional career, I enjoy
                     hiking, table tennis, netflexing, and having a good time
                     with friends. Always interested in meeting new people and
