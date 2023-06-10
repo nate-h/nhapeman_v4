@@ -43,17 +43,13 @@
     </project-template>
 </template>
 
-<script>
-export default {
-    name: "Mario",
-    path: "mario",
-    listed: true,
-    data() {
-        return {
-            title: "Super Mario Bros Reloaded",
-            description: "C++ with SDL",
-            moreInfoButtonText: "Demo",
-        };
-    },
-};
+<script setup lang="ts">
+const name = "Mario"
+const path = "mario"
+const listed = true
+
+const title = "Super Mario Bros Reloaded"
+const description = "C++ with SDL"
+const moreInfoButtonText = "Demo"
+
 </script>

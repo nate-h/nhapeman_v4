@@ -106,19 +106,13 @@
     </project-template>
 </template>
 
-<script>
-export default {
-    name: "Whirling",
-    path: "whirling",
-    listed: true,
-    data() {
-        return {
-            title: "Whirling: an AI-driven audio visualizer",
-            description: "Librosa, OpenGL, Python, Spleeter",
-            moreInfoButtonText: "Demo",
-        };
-    },
-};
+<script setup lang="ts">
+const name = "Whirling"
+const path = "whirling"
+const listed = true
+const title = "Whirling: an AI-driven audio visualizer"
+const description = "Librosa, OpenGL, Python, Spleeter"
+const moreInfoButtonText = "Demo"
 </script>
 
 <style lang="scss">

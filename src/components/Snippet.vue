@@ -4,18 +4,9 @@
     </prism>
 </template>
 
-<script>
+<script setup lang="ts">
 import Prism from "vue-prism-component";
-
-export default {
-    components: {
-        Prism,
-    },
-    props: {
-        lang: {
-            type: String,
-            default: "javascript",
-        },
-    },
-};
+defineProps<{
+  lang: {type: string, default: "javascript"}
+}>()
 </script>

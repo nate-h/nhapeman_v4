@@ -48,17 +48,11 @@
     </project-template>
 </template>
 
-<script>
-export default {
-    name: "Pacman",
-    path: "pacman",
-    listed: true,
-    data() {
-        return {
-            title: "Pacman Remake",
-            description: "Javascript",
-            moreInfoButtonText: "Play",
-        };
-    },
-};
+<script setup lang="ts">
+const name = "Pacman"
+const path = "pacman"
+const listed = true
+const title = "Pacman Remake"
+const description = "Javascript"
+const moreInfoButtonText = "Play"
 </script>

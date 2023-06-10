@@ -7,10 +7,10 @@
     </div>
 </template>
 
-<script>
-export default {
-    props: ["header"],
-};
+<script setup lang="ts">
+defineProps<{
+  header: string
+}>()
 </script>
 
 <style lang="scss">

@@ -57,17 +57,11 @@
     </project-template>
 </template>
 
-<script>
-export default {
-    name: "MyTunes",
-    path: "mytunes",
-    listed: true,
-    data() {
-        return {
-            title: "MyTunes: a music player",
-            description: "Java and JavaZOOM",
-            moreInfoButtonText: "Demo",
-        };
-    },
-};
+<script setup lang="ts">
+const name = "MyTunes"
+const path = "mytunes"
+const listed = true
+const title = "MyTunes: a music player"
+const description = "Java and JavaZOOM"
+const moreInfoButtonText = "Demo"
 </script>

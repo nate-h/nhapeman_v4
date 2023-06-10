@@ -35,17 +35,11 @@
     </project-template>
 </template>
 
-<script>
-export default {
-    name: "PixelChaser",
-    path: "pixelchaser",
-    listed: false,
-    data() {
-        return {
-            title: "Pixel Chaser",
-            description: "Javascript",
-            moreInfoButtonText: "Demo",
-        };
-    },
-};
+<script setup lang="ts">
+const name = "PixelChaser"
+const path = "pixelchaser"
+const listed = false
+const title = "Pixel Chaser"
+const description = "Javascript"
+const moreInfoButtonText = "Demo"
 </script>

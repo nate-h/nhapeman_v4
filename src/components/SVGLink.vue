@@ -5,12 +5,11 @@
     </a>
 </template>
 
-<script>
-
-
-export default {
-    props: ["link", "label", "color-off", "color-hover", "color-down"],
-};
+<script setup lang="ts">
+defineProps<{
+  link: string,
+  label: string,
+}>()
 </script>
 
 <style lang="scss">

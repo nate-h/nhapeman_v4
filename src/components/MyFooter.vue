@@ -21,12 +21,11 @@
     </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "../scss/main.scss";
 .my-footer {

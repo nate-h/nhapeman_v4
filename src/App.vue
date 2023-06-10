@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <!-- <NavBar /> -->
+      <NavBar />
       <RouterView class="route-base" />
       <MyFooter />
   </div>

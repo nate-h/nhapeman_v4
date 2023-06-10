@@ -49,7 +49,7 @@
     </header>
 </template>
 
-<script>
+<script lang="ts">
 import arrowSvg from "@/assets/arrow.svg";
 import { RouterLink, RouterView } from 'vue-router'
 
@@ -84,7 +84,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "../scss/main.scss";
 

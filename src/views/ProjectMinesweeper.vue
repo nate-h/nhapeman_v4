@@ -30,17 +30,12 @@
     </project-template>
 </template>
 
-<script>
-export default {
-    name: "Minesweeper",
-    path: "minesweeper",
-    listed: true,
-    data() {
-        return {
-            title: "Minesweeper Remake",
-            description: "Javascript",
-            moreInfoButtonText: "Play",
-        };
-    },
-};
+<script setup lang="ts">
+const name = "Minesweeper"
+const path = "minesweeper"
+const listed = true
+
+const title = "Minesweeper Remake"
+const description = "Javascript"
+const moreInfoButtonText = "Play"
 </script>

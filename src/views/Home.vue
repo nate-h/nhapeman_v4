@@ -68,30 +68,15 @@
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import JobContainer from "../components/Job.vue";
 import AboutMeContainer from "../components/AboutMe.vue";
 
-export default {
-    name: "HomeContainer",
-    data() {
-        return {
-            links: [
-                { name: "About Me", link: "aboutme" },
-                { name: "Job History", link: "jobhistory" },
-                { name: "Projects", link: "projects" },
-            ],
-        };
-    },
-    components: {
-        "job-container": JobContainer,
-        "about-me-container": AboutMeContainer,
-    },
-    methods: {},
-    created() {
-        //this.$store.commit("setLinks", this.links);
-    },
-};
+const links = [
+    { name: "About Me", link: "aboutme" },
+    { name: "Job History", link: "jobhistory" },
+    { name: "Projects", link: "projects" },
+]
 </script>
 
 <style lang="scss">

@@ -35,7 +35,6 @@ const props = defineProps<{
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "../scss/main.scss";
 $img-side: 200px;

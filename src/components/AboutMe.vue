@@ -20,7 +20,7 @@
                 </p>
             </div>
             <div class="row">
-                <img src="../assets/stitchedme.jpg" alt />
+                <img src="../assets/stitchedme.jpg" alt="pic-of-me" />
             </div>
             <div class="row">
                 <h2>Details</h2>
@@ -42,30 +42,23 @@
     </header-container>
 </template>
 
-<script>
-export default {
-    name: "AboutMe",
-    data() {
-        return {};
-    },
-    methods: {
-        my_rough_age() {
-            var bday = new Date("1990-03-01");
-            var ageDifMs = Date.now() - bday.getTime();
-            var ageDate = new Date(ageDifMs);
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        },
-        years_of_experience() {
-            var firstJobDate = new Date("2014-06-01");
-            var ageDifMs = Date.now() - firstJobDate.getTime();
-            var ageDate = new Date(ageDifMs);
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        },
-    },
-};
+<script setup lang="ts">
+
+function my_rough_age() {
+    const bday = new Date("1990-03-01");
+    const ageDifMs = Date.now() - bday.getTime();
+    const ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+function years_of_experience() {
+    const firstJobDate = new Date("2014-06-01");
+    const ageDifMs = Date.now() - firstJobDate.getTime();
+    const ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "../scss/main.scss";
 .about-me-container {
