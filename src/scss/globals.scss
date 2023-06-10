@@ -1,13 +1,13 @@
 // Dark colors.
 $dark0: #000;
-$dark1: rgba(0, 0, 0, .87);  // For primary content (headlines, articles, etc.)
-$dark2: rgba(0, 0, 0, .54);  // For secondary content (Dates)
-$dark3: rgba(0, 0, 0, .38);  // Ancillary content (copyright notice in a footer)
+$dark1: rgba(0, 0, 0, 0.87); // For primary content (headlines, articles, etc.)
+$dark2: rgba(0, 0, 0, 0.54); // For secondary content (Dates)
+$dark3: rgba(0, 0, 0, 0.38); // Ancillary content (copyright notice in a footer)
 
 // Light colors.
 $light1: rgba(255, 255, 255, 1);
-$light2: rgba(255, 255, 255, .7);
-$light3: rgba(255, 255, 255, .5);
+$light2: rgba(255, 255, 255, 0.7);
+$light3: rgba(255, 255, 255, 0.5);
 
 // Basic colors.
 $color1: #4db6ac;
@@ -15,30 +15,26 @@ $color2: #00897b;
 $color3: #004d40;
 
 // etc.
-$shadow: rgba(0, 0, 0, .2);
-$bg-shadow: rgba(0, 0, 0, .7);
+$shadow: rgba(0, 0, 0, 0.2);
+$bg-shadow: rgba(0, 0, 0, 0.7);
 
 ///////////////////////////////////////////////////////////////////////// Fonts
 
 // Heading font sizes
-$heading-sizes: (
-    '2.25rem',
-    '2rem',
-    '1.75rem',
-    '1.5rem',
-    '1.25rem',
-);
+$heading-sizes: ('2.25rem', '2rem', '1.75rem', '1.5rem', '1.25rem');
 
 // Headings
 $heading-font-weight: 600;
-$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
+  sans-serif;
 $heading-line-height: 1.2;
 
 $fw-normal: 450;
 $fw-bold: 700;
 
 // Default font family
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial',
+  sans-serif !default;
 
 // Code (monospace) font family
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
@@ -47,25 +43,24 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 // Padding
 $padding: 1rem !default;
-$padding-small: .5rem;
+$padding-small: 0.5rem;
 $padding-medium: 1.5rem;
-$padding-large: 2.0rem;
-$padding-x-large: 3.0rem;
-$padding-xx-large: 4.0rem;
-$padding-xxx-large: 5.0rem;
+$padding-large: 2rem;
+$padding-x-large: 3rem;
+$padding-xx-large: 4rem;
+$padding-xxx-large: 5rem;
 
 // Margin
 $margin: 1rem !default;
-$margin-small: .75rem;
+$margin-small: 0.75rem;
 $margin-medium: 1.5rem;
-$margin-large: 2.0rem;
-$margin-x-large: 3.0rem;
-$margin-xx-large: 4.0rem;
-$margin-xxx-large: 5.0rem;
-
+$margin-large: 2rem;
+$margin-x-large: 3rem;
+$margin-xx-large: 4rem;
+$margin-xxx-large: 5rem;
 
 // Transitions
-$transition-time: .25s !default; //global transition time
+$transition-time: 0.25s !default; //global transition time
 $transition-function: ease !default; //transition function for CSS3 transitions
 
 $scale: 1.05;

@@ -1,165 +1,161 @@
 @import 'globals';
 
-
 ////////////////////////////////////////////////////////////////////////
 // direction-layouts
 ////////////////////////////////////////////////////////////////////////
 
 %direction-layouts {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
 
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
+  .grow {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
 
-    .grow {
-        flex-basis: 0;
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
+  &.equal > * {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
 
-    &.equal > * {
-        flex-basis: 0;
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
+  &.lt {
+    text-align: left;
+  }
 
-    &.lt {
-        text-align: left;
-    }
+  &.rt {
+    text-align: right;
+  }
 
-    &.rt {
-        text-align: right;
-    }
-
-    &.ca {
-        align-items: center;
-    }
+  &.ca {
+    align-items: center;
+  }
 }
 
 %l-to-r {
-    @extend %direction-layouts;
-    flex-direction: row;
+  @extend %direction-layouts;
+  flex-direction: row;
 }
 
 %r-to-l {
-    @extend %direction-layouts;
-    flex-direction: row-reverse;
+  @extend %direction-layouts;
+  flex-direction: row-reverse;
 }
 
 %t-to-b {
-    @extend %direction-layouts;
-    flex-direction: column;
+  @extend %direction-layouts;
+  flex-direction: column;
 }
 
 %b-to-t {
-    @extend %direction-layouts;
-    flex-direction: column-reverse;
+  @extend %direction-layouts;
+  flex-direction: column-reverse;
 }
 
-@mixin holder($direction: "l-to-r", $ta: "ct", $a: "") {
+@mixin holder($direction: 'l-to-r', $ta: 'ct', $a: '') {
+  // Base styles.
+  display: flex;
+  flex-wrap: nowrap;
 
-    // Base styles.
-    display: flex;
-    flex-wrap: nowrap;
+  // Handle direction to put elements.
+  @if $direction == 'l-to-r' {
+    flex-direction: row;
+  } @else if $direction == 't-to-b' {
+    flex-direction: column;
+  } @else if $direction == 'r-to-l' {
+    flex-direction: row;
+    flex-direction: row-reverse;
+  } @else if $direction == 'b-to-t' {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
 
-    // Handle direction to put elements.
-    @if $direction == 'l-to-r' {
-        flex-direction: row;
-    } @else if $direction == 't-to-b' {
-        flex-direction: column;
-    } @else if $direction == 'r-to-l' {
-        flex-direction: row;
-        flex-direction: row-reverse;
-    } @else if $direction == 'b-to-t' {
-        flex-direction: column;
-        flex-direction: column-reverse;
-    }
+  // Handle text alignment
+  @if $ta == 'ct' {
+    text-align: center;
+  } @else if $ta == 'lt' {
+    text-align: left;
+  } @else if $ta == 'rt' {
+    text-align: right;
+  }
 
-    // Handle text alignment
-    @if $ta == 'ct' {
-        text-align: center;
-    } @else if $ta == 'lt' {
-        text-align: left;
-    } @else if $ta == 'rt' {
-        text-align: right;
-    }
-
-    // Handle text alignment
-    @if $a == 'ca' {
-        align-items: center;
-    }
+  // Handle text alignment
+  @if $a == 'ca' {
+    align-items: center;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Misc
 ////////////////////////////////////////////////////////////////////////
 
-
 %default-size {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 %box-shadow {
-    box-shadow: 0 4px 6px 0 $shadow;
+  box-shadow: 0 4px 6px 0 $shadow;
 }
 
 %button {
-    color: red;
+  color: red;
 }
 
 %pop {
-    transition: all $transition-time $transition-function;
+  transition: all $transition-time $transition-function;
 
-    &:hover {
-        -webkit-transform: scale($scale);
-        -ms-transform: scale($scale);
-        transform: scale($scale);
-    }
+  &:hover {
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+  }
 }
 
 %hover-effect {
-    color: $color1;
-    fill: $color1;
+  color: $color1;
+  fill: $color1;
 }
 
 %active-effect {
-    color: $color2;
-    fill: $color2;
+  color: $color2;
+  fill: $color2;
 }
 
 %fast-fx {
-    -webkit-transition: -webkit-transform 0.15s ease-in-out;
-    transition: transform 0.15s ease-in-out;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 %router-link {
-    @extend %l-to-r, .ca;
-    font-size: 2rem;
-    margin: 0;
-    padding: $padding-small;
+  @extend %l-to-r, .ca;
+  font-size: 2rem;
+  margin: 0;
+  padding: $padding-small;
 
+  svg {
+    @extend %fast-fx;
+
+    margin-left: $margin-small;
+    height: $logo-small;
+    width: $logo-small;
+    transform: rotate(180deg);
+
+    fill: $color2;
+    padding: 0;
+    color: $color2;
+  }
+
+  &.router-link-exact-active {
+    @extend %active-effect;
+    color: $light1;
     svg {
-        @extend %fast-fx;
-
-        margin-left: $margin-small;
-        height: $logo-small;
-        width: $logo-small;
-        transform: rotate(180deg);
-
-        fill: $color2;
-        padding: 0;
-        color: $color2;
+      fill: $light1;
     }
+  }
 
-    &.router-link-exact-active {
-        @extend %active-effect;
-        color: $light1;
-        svg {
-            fill: $light1;
-        }
-    }
-
-    &:hover:not(.router-link-exact-active) {
-        @extend %hover-effect, %pop;
-    }
+  &:hover:not(.router-link-exact-active) {
+    @extend %hover-effect, %pop;
+  }
 }
