@@ -10,7 +10,7 @@ const app = createApp(App)
 
 app.use(router)
 
-app.component('svg-link', SVGLink)
+app.component('SVGLink', SVGLink)
 app.component('header-container', HeaderContainer)
 app.component('project-template', ProjectTemplate)
 //app.component("snippet", Snippet);

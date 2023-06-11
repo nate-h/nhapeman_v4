@@ -18,10 +18,6 @@
   </footer>
 </template>
 
-<script setup lang="ts">
-import type SVGLink from './SVGLink.vue'
-</script>
-
 <style lang="scss" scoped>
 @import '../scss/main.scss';
 .my-footer {
