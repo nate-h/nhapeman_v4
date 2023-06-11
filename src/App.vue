@@ -1,13 +1,13 @@
 <template>
-  <NavBar />
+  <AppHeader />
   <RouterView class="route-base" />
-  <MyFooter />
+  <AppFooter />
 </template>
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
-import MyFooter from './components/MyFooter.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
 
 <style lang="scss">
