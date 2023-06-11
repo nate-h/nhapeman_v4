@@ -8,17 +8,19 @@
     </div>
 
     <div class="social-links">
-      <svg-link link="https://www.linkedin.com/in/nhapeman/">
+      <SVGLink link="https://www.linkedin.com/in/nhapeman/" light>
         <img alt="linkedin logo" src="@/assets/linkedin.svg" />
-      </svg-link>
-      <svg-link link="https://github.com/nate-h">
+      </SVGLink>
+      <SVGLink link="https://github.com/nate-h" light>
         <img alt="linkedin logo" src="@/assets/github.svg" />
-      </svg-link>
+      </SVGLink>
     </div>
   </footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type SVGLink from './SVGLink.vue'
+</script>
 
 <style lang="scss" scoped>
 @import '../scss/main.scss';
@@ -37,21 +39,6 @@
 
     & > * {
       margin: 4px;
-    }
-
-    .svg-link {
-      fill: $light1;
-      color: $light1;
-
-      &:hover {
-        fill: $color1;
-        color: $color1;
-      }
-
-      &:active {
-        fill: $color2;
-        color: $color2;
-      }
     }
   }
 }

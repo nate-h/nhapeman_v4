@@ -1,14 +1,13 @@
 <template>
-  <a :href="link" class="svg-link">
+  <a :href="link" class="svg-link" :class="{ light: light }">
     <slot></slot>
-    <p class="svg-label">{{ label }}</p>
   </a>
 </template>
 
 <script setup lang="ts">
 defineProps<{
   link: string
-  label: string
+  light?: boolean
 }>()
 </script>
 
@@ -20,13 +19,17 @@ defineProps<{
 
   transition: all $transition-time $transition-function;
 
-  svg {
+  img {
     height: $logo;
     width: $logo;
   }
 
   .svg-label {
     margin-left: $margin;
+  }
+
+  &.light {
+    filter: invert(1);
   }
 }
 </style>

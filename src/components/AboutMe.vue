@@ -9,10 +9,10 @@
           {{ years_of_experience() }} years primarily as a full stack developer but have worked in
           other domains such as: simulation / game development, machine learning and data science.
           The computer languages I have the most experience with are c/c++, python and javascript
-          but have coded for fun and professionally in many more. Outside of my career,
-          I enjoy hiking, table tennis, netflexing, and having a good time with friends. Always
-          interested in meeting new people and learning something new so send me an email if you
-          want to get in touch.
+          but have coded for fun and professionally in many more. Outside of my career, I enjoy
+          hiking, table tennis, netflexing, and having a good time with friends. Always interested
+          in meeting new people and learning something new so send me an email if you want to get in
+          touch.
         </p>
       </div>
       <div class="row">
