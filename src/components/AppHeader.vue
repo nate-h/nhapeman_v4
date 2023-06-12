@@ -2,7 +2,7 @@
   <header class="nav-bar">
     <!-- Logo -->
     <div class="logo-blob">
-      <img src="../assets/logo.png" class="logo" />
+      <img src="@/assets/logo.png" class="logo" />
       <div class="me t-to-b lt">
         <RouterLink to="/">
           <h1>Nathanial Hapeman</h1>

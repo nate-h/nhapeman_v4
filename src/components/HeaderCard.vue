@@ -1,5 +1,5 @@
 <template>
-  <div class="header-container">
+  <div class="header-card">
     <h1 class="header">{{ header }}</h1>
     <div class="body">
       <slot></slot>
@@ -16,7 +16,7 @@ defineProps<{
 <style lang="scss">
 @import '../scss/main.scss';
 
-.header-container {
+.header-card {
   align-items: center;
   background-color: $light1;
   display: flex;

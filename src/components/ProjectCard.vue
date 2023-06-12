@@ -1,5 +1,5 @@
 <template>
-  <div class="project-template">
+  <div class="project-card">
     <!-- Summary -->
     <div class="summary-template" v-if="showSummary()">
       <div class="summary-image">
@@ -18,7 +18,7 @@
         </div>
         <h2 class="footer">
           <RouterLink :to="'/projects/' + path" class="link">
-            <span>{{ moreInfoButtonText }}</span>
+            <span>{{ moreInfo }}</span>
           </RouterLink>
         </h2>
       </div>
@@ -41,52 +41,42 @@
   </div>
 </template>
 
-<script>
-import { RouterLink, RouterView } from 'vue-router'
+<script setup lang="ts">
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 
-export default {
-  name: 'ProjectTemplate',
-  methods: {
-    showSummary: function () {
-      return this.$parent.$route.name !== this.name
-    },
-    showDemo: function () {
-      return this.$parent.$route.name === this.name
-    }
-  },
-  computed: {
-    path: function () {
-      return this.$parent.$options.path
-    },
-    name: function () {
-      return this.$parent.$options.name
-    },
-    title: function () {
-      return this.$parent.title
-    },
-    description: function () {
-      return this.$parent.description
-    },
-    moreInfoButtonText: function () {
-      return this.$parent.moreInfoButtonText
-    }
-  },
-  created: function () {
-    let neededOptions = ['name', 'path', 'listed']
-    for (const prop of neededOptions) {
-      if (this.$parent.$options[prop] === null || this.$parent.$options[prop] === undefined) {
-        console.error(`Need to override ${prop}`)
-      }
-    }
 
-    let neededOverrides = ['title', 'description', 'moreInfoButtonText']
-    for (let prop of neededOverrides) {
-      if (this.$parent[prop] === null || this.$parent[prop] === undefined) {
-        console.error(`Need to override ${prop}`)
-      }
+defineProps<{
+  title: string,
+  description: string,
+  moreInfo: string
+}>()
+
+const route = useRoute()
+
+
+function showSummary() {
+  return route.path !== "/projects"
+}
+function showDemo() {
+  return route.path === "/projects"
+}
+
+function created() {
+  let neededOptions = ['name', 'path', 'listed']
+  for (const prop of neededOptions) {
+    if (this.$parent.$options[prop] === null || this.$parent.$options[prop] === undefined) {
+      console.error(`Need to override ${prop}`)
+    }
+  }
+
+  let neededOverrides = ['title', 'description', 'moreInfo']
+  for (let prop of neededOverrides) {
+    if (this.$parent[prop] === null || this.$parent[prop] === undefined) {
+      console.error(`Need to override ${prop}`)
     }
   }
 }
+
 </script>
 
 <style lang="scss">
@@ -94,7 +84,7 @@ export default {
 
 $img-side: 200px;
 
-.project-template {
+.project-card {
   background-color: $light1;
   max-width: map-get($breakpoints, large);
   padding: $padding-x-large;
@@ -164,7 +154,7 @@ $img-side: 200px;
 }
 
 @media screen and (max-width: $break-large) {
-  .project-template {
+  .ProjectCard {
     padding: $padding-large;
 
     .header {

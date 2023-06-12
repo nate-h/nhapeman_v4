@@ -1,7 +1,7 @@
 <template>
-  <project-template class="project-vue">
+  <ProjectCard title="title" description="description" moreInfo="moreInfo" class="project-vue">
     <template v-slot:summaryImage>
-      <vuelogo></vuelogo>
+      <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
     </template>
 
     <template v-slot:summaryText>
@@ -22,7 +22,7 @@
     </template>
 
     <template v-slot:demo>
-      <vuelogo></vuelogo>
+      <vuelogo/>
     </template>
 
     <template v-slot:demoDetails>
@@ -30,7 +30,7 @@
         My experience with Vue so far has been completely positive, unlike my experience with
         AngularJS which could have been better. I suspected that the documentation for AngularJS was
         bad but it wasn't until I dove into Vue that I realized what I was missing. The best way to
-        read AngularJS documentation is to ignore it completly and use stackoverflow. I found it way
+        read AngularJS documentation is to ignore it completely and use stackoverflow. I found it way
         too complex for describing simple concepts. It also uses other AngularJS terms to define
         something. So You almost need an understanding of everything else to understand one thing.
       </p>
@@ -61,11 +61,11 @@
       <p>
         Another great feature Vue has is the ability to define a component in one file. These
         <a href="https://vuejs.org/v2/guide/single-file-components.html"> single file components</a>
-        simply have the Javascript, CSS, and HTML stuffed into 1 file as opposed to 3 seperate
+        simply have the Javascript, CSS, and HTML stuffed into 1 file as opposed to 3 separate
         files. The beauty of this feature is that developers are more incentivised to break up their
         code into smaller pieces. I find it annoying when you want to create a small component but
         need to create 3 files for your css/js/html that have 30 lines each. Being able to throw all
-        3 snippets into one file makes it so: you're not overwhlemed by number of files, you can
+        3 snippets into one file makes it so: you're not overwhelmed by number of files, you can
         bounce around the code faster since it's all in one file, delete the component easier.
       </p>
       <p>
@@ -77,28 +77,14 @@
         <!-- <snippet lang="bash">{{ VueSiteSetup }}</snippet> -->
       </p>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
-<script>
-import vuelogo from '@/assets/vuelogo.svg'
+<script setup lang="ts">
 //import VueSiteSetup from "raw-loader!@/assets/text/VueSiteSetup.txt";
-export default {
-  name: 'Vue',
-  path: 'vue',
-  listed: true,
-  data() {
-    return {
-      title: 'My thoughts on learning Vue',
-      description: 'Vue, Sass',
-      moreInfoButtonText: 'Read More'
-      //VueSiteSetup: VueSiteSetup,
-    }
-  },
-  components: {
-    vuelogo
-  }
-}
+const title = 'My thoughts on learning Vue'
+const description = 'Vue, Sass'
+const moreInfo = 'Read More'
 </script>
 
 <style lang="scss">

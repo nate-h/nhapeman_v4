@@ -2,7 +2,7 @@
   <div class="home">
     <about-me-container></about-me-container>
 
-    <header-container header="Job History" class="job-components">
+    <HeaderCard header="Job History" class="job-components">
       <!-- Inject Job Components -->
       <job-container
         company="HRL"
@@ -56,7 +56,7 @@
           fracking simulator.
         </p>
       </job-container>
-    </header-container>
+    </HeaderCard>
   </div>
 </template>
 

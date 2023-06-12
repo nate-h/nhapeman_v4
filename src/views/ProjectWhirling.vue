@@ -1,7 +1,7 @@
 <template>
-  <project-template>
+  <ProjectCard title="title" description="description" moreInfo="moreInfo">
     <template v-slot:summaryImage>
-      <img src="../assets/whirling.png" />
+      <img src="@/assets/whirling.png" />
     </template>
 
     <template v-slot:summaryText>
@@ -77,16 +77,13 @@
         <li style="color: purple">Purple -> Bass</li>
       </ul>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
 <script setup lang="ts">
-const name = 'Whirling'
-const path = 'whirling'
-const listed = true
 const title = 'Whirling: an AI-driven audio visualizer'
 const description = 'Librosa, OpenGL, Python, Spleeter'
-const moreInfoButtonText = 'Demo'
+const moreInfo = 'Demo'
 </script>
 
 <style lang="scss">

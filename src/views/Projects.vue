@@ -1,20 +1,24 @@
 <template>
   <div class="projects">
-    <div v-if="$route.name === 'Projects'" class="list">
-      <header-container header="Projects">
+    <ul v-if="$route.name === 'Projects'" class="list">
+      <HeaderCard header="Projects">
         <p>Here are some of the fun coding projects I created outside of work. Enjoy!</p>
-      </header-container>
+      </HeaderCard>
 
-      <div v-for="project in projects" :key="project.name">
-        <component v-bind:is="project"></component>
-      </div>
-    </div>
+      <ProjectMario/>
+      <ProjectWhirling/>
+      <ProjectMinesweeper/>
+      <ProjectMyTunes/>
+      <ProjectVue/>
+      <ProjectPacman/>
+      <ProjectPixelChaser/>
+    </ul>
 
     <router-view class="project-child"></router-view>
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import ProjectMario from './ProjectMario.vue'
 import ProjectWhirling from './ProjectWhirling.vue'
 import ProjectMinesweeper from './ProjectMinesweeper.vue'
@@ -22,21 +26,6 @@ import ProjectMyTunes from './ProjectMyTunes.vue'
 import ProjectVue from './ProjectVue.vue'
 import ProjectPacman from './ProjectPacman.vue'
 import ProjectPixelChaser from './ProjectPixelChaser.vue'
-export default {
-  name: 'Projects',
-  created() {
-    this.projects = [
-      ProjectMario,
-      ProjectWhirling,
-      ProjectPixelChaser,
-      ProjectVue,
-      ProjectMyTunes,
-      ProjectPacman,
-      ProjectMinesweeper
-    ]
-    this.projects = this.projects.filter((p) => p.listed === true)
-  }
-}
 </script>
 
 <style lang="scss">

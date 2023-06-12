@@ -1,5 +1,5 @@
 <template>
-  <header-container header="About Me">
+  <HeaderCard header="About Me">
     <div class="about-me-container">
       <div class="row">
         <h2>About Me</h2>
@@ -16,7 +16,7 @@
         </p>
       </div>
       <div class="row">
-        <img src="../assets/stitchedme.jpg" alt="pic-of-me" />
+        <img src="@/assets/stitchedme.jpg" alt="pic-of-me" />
       </div>
       <div class="row">
         <h2>Details</h2>
@@ -33,7 +33,7 @@
         </ul>
       </div>
     </div>
-  </header-container>
+  </HeaderCard>
 </template>
 
 <script setup lang="ts">

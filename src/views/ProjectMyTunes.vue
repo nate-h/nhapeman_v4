@@ -1,7 +1,7 @@
 <template>
-  <project-template>
+  <ProjectCard title="title" description="description" moreInfo="moreInfo">
     <template v-slot:summaryImage>
-      <img src="../assets/recordName.png" />
+      <img src="@/assets/recordName.png" />
     </template>
 
     <template v-slot:summaryText>
@@ -41,14 +41,11 @@
         the multi-threading for playing the sound.
       </p>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
 <script setup lang="ts">
-const name = 'MyTunes'
-const path = 'mytunes'
-const listed = true
 const title = 'MyTunes: a music player'
 const description = 'Java and JavaZOOM'
-const moreInfoButtonText = 'Demo'
+const moreInfo = 'Demo'
 </script>

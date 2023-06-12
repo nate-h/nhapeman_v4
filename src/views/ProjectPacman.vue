@@ -1,7 +1,7 @@
 <template>
-  <project-template>
+  <ProjectCard title="title" description="description" moreInfo="moreInfo">
     <template v-slot:summaryImage>
-      <img src="../assets/pacman.png" />
+      <img src="@/assets/pacman.png" />
     </template>
 
     <template v-slot:summaryText>
@@ -40,14 +40,11 @@
         to compute the fastest path.
       </p>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
 <script setup lang="ts">
-const name = 'Pacman'
-const path = 'pacman'
-const listed = true
 const title = 'Pacman Remake'
 const description = 'Javascript'
-const moreInfoButtonText = 'Play'
+const moreInfo = 'Play'
 </script>

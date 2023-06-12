@@ -1,7 +1,7 @@
 <template>
-  <project-template>
+  <ProjectCard title="title" description="description" moreInfo="moreInfo">
     <template v-slot:summaryImage>
-      <img src="../assets/pacman.png" />
+      <img src="@/assets/pacman.png" />
     </template>
 
     <template v-slot:summaryText>
@@ -30,14 +30,11 @@
         dolorem, quo aliquid sit veniam? Praesentium, facere voluptatem.
       </p>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
 <script setup lang="ts">
-const name = 'PixelChaser'
-const path = 'pixelchaser'
-const listed = false
 const title = 'Pixel Chaser'
 const description = 'Javascript'
-const moreInfoButtonText = 'Demo'
+const moreInfo = 'Demo'
 </script>

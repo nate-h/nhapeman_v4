@@ -1,7 +1,7 @@
 <template>
-  <project-template>
+  <ProjectCard title="title" description="description" moreInfo="moreInfo">
     <template v-slot:summaryImage>
-      <img src="../assets/minesweeper.png" />
+      <img src="@/assets/minesweeper.png" />
     </template>
 
     <template v-slot:summaryText>
@@ -26,15 +26,11 @@
     <template v-slot:demoDetails>
       <p></p>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
 <script setup lang="ts">
-const name = 'Minesweeper'
-const path = 'minesweeper'
-const listed = true
-
 const title = 'Minesweeper Remake'
 const description = 'Javascript'
-const moreInfoButtonText = 'Play'
+const moreInfo = 'Play'
 </script>

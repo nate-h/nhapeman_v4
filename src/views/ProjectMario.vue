@@ -1,7 +1,7 @@
 <template>
-  <project-template>
+  <ProjectCard title="title" description="description" moreInfo="moreInfo">
     <template v-slot:summaryImage>
-      <img src="../assets/mario.jpg" />
+      <img src="@/assets/mario.jpg" />
     </template>
 
     <template v-slot:summaryText>
@@ -31,15 +31,11 @@
     <template v-slot:demoDetails>
       <p></p>
     </template>
-  </project-template>
+  </ProjectCard>
 </template>
 
 <script setup lang="ts">
-const name = 'Mario'
-const path = 'mario'
-const listed = true
-
 const title = 'Super Mario Bros Reloaded'
 const description = 'C++ with SDL'
-const moreInfoButtonText = 'Demo'
+const moreInfo = 'Demo'
 </script>

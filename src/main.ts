@@ -2,8 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import SVGLink from './components/SVGLink.vue'
-import HeaderContainer from './components/HeaderContainer.vue'
-import ProjectTemplate from './components/ProjectTemplate.vue'
+import HeaderCard from './components/HeaderCard.vue'
+import ProjectCard from './components/ProjectCard.vue'
 //import Snippet from "./components/Snippet.vue";
 
 const app = createApp(App)
@@ -11,8 +11,8 @@ const app = createApp(App)
 app.use(router)
 
 app.component('SVGLink', SVGLink)
-app.component('header-container', HeaderContainer)
-app.component('project-template', ProjectTemplate)
+app.component('HeaderCard', HeaderCard)
+app.component('ProjectCard', ProjectCard)
 //app.component("snippet", Snippet);
 
 app.mount('#app')
