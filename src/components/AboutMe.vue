@@ -26,7 +26,7 @@
           <li>Professional Experience: <b>{{ years_of_experience() }} years</b></li>
           <li>Age: <b>{{ my_rough_age() }}</b></li>
           <li>Location: <b>Los Angeles</b></li>
-
+          <li>Open to: <b>Remote or LA based</b></li>
           <li>Education:</li>
           <li><b>UC Riverside</b></li>
           <li><b>BS in Mech Engr, minor in Comp Sci</b></li>

@@ -26,6 +26,9 @@
     <SVGLink link="https://github.com/nate-h" light>
       <img alt="github logo" src="@/assets/github.svg" />
     </SVGLink>
+    <SVGLink link="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" light>
+      <img alt="email logo" src="@/assets/email.svg" />
+    </SVGLink>
   </header>
 </template>
 
