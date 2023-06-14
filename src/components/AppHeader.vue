@@ -49,6 +49,8 @@ const routes = useRouter().options.routes
   background-color: $dark0;
   padding: $padding;
   display: flex;
+  width: 100%;
+  z-index: 100;
 
   img {
     height: 4.5rem;

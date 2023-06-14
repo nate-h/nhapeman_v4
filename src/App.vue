@@ -17,15 +17,12 @@ import AppHeader from './components/AppHeader.vue'
   height: 100vh;
 
   .app-header {
-    flex: 0 0 auto;
+    position: fixed;
   }
 
   .route-base {
-    flex: 1 0 auto;
-  }
-
-  .my-footer {
-    flex: 0 0 auto;
+    flex: 1;
+    margin-top: 65px;
   }
 }
 </style>
