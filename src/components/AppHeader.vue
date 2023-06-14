@@ -1,5 +1,5 @@
 <template>
-  <header class="nav-bar">
+  <header class="app-header">
     <!-- Logo -->
     <div class="logo-blob">
       <img src="@/assets/logo.png" class="logo" />
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Links -->
-    <div class="link-holder l-to-r">
+    <div class="routes l-to-r">
       <div v-for="link in routes" :key="link.name">
         <RouterLink class="router-link" :to="link.path">
           <span>{{ link.name }}</span>
@@ -20,15 +20,19 @@
       </div>
     </div>
 
-    <SVGLink link="https://www.linkedin.com/in/nhapeman/" light>
-      <img alt="linkedin logo" src="@/assets/linkedin.svg" />
-    </SVGLink>
-    <SVGLink link="https://github.com/nate-h" light>
-      <img alt="github logo" src="@/assets/github.svg" />
-    </SVGLink>
-    <SVGLink link="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" light>
-      <img alt="email logo" src="@/assets/email.svg" />
-    </SVGLink>
+    <!-- Social Links -->
+    <div class="social-links">
+      <SVGLink link="https://www.linkedin.com/in/nhapeman/" light>
+        <img alt="linkedin logo" src="@/assets/linkedin.svg" />
+      </SVGLink>
+      <SVGLink link="https://github.com/nate-h" light>
+        <img alt="github logo" src="@/assets/github.svg" />
+      </SVGLink>
+      <SVGLink link="mailto:nhapeman@gmail.com?Subject=Hey%20Nate" light>
+        <img alt="email logo" src="@/assets/email.svg" />
+      </SVGLink>
+    </div>
+
   </header>
 </template>
 
@@ -41,10 +45,10 @@ const routes = useRouter().options.routes
 <style lang="scss">
 @import '../scss/main.scss';
 
-.nav-bar {
-  @include holder('r-to-r');
+.app-header {
   background-color: $dark0;
   padding: $padding;
+  display: flex;
 
   img {
     height: 4.5rem;
@@ -72,57 +76,23 @@ const routes = useRouter().options.routes
     }
   }
 
-  .link-holder {
+  .routes {
     @extend %l-to-r, .ca;
-
     margin-left: auto;
   }
-}
 
-.dropdown {
-  vertical-align: middle;
-  position: relative;
-
-  .label {
-    @extend %l-to-r, .ca;
-  }
-
-  .list {
-    @extend %t-to-b;
-    color: white;
-    display: none;
-    background-color: $dark1;
-    flex-wrap: nowrap;
-    font-size: 2rem;
-    padding: $padding;
-    position: absolute;
-    right: 0;
-    white-space: nowrap;
-    z-index: 2;
-
-    & > *:not(:last-child) {
-      margin-bottom: $margin;
-    }
-  }
-
-  &:hover {
-    background-color: $dark1;
-    .list {
-      display: flex;
-    }
-
-    .label svg {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
+  .social-links {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
   }
 }
 
 @media screen and (max-width: $break-large) {
-  .nav-bar {
+  .app-header {
     @include holder('t-to-b', 'lt', 'ca');
 
-    .link-holder {
+    .routes {
       margin-left: 0;
     }
   }

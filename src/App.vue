@@ -16,7 +16,7 @@ import AppHeader from './components/AppHeader.vue'
   flex-direction: column;
   height: 100vh;
 
-  .nav-bar {
+  .app-header {
     flex: 0 0 auto;
   }
 
