@@ -1,5 +1,5 @@
 <template>
-  <ProjectCard title="title" description="description" moreInfo="moreInfo">
+  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo">
     <template v-slot:summaryImage>
       <img src="@/assets/whirling.png" />
     </template>

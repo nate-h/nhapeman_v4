@@ -1,5 +1,5 @@
 <template>
-  <ProjectCard title="title" description="description" moreInfo="moreInfo" class="project-vue">
+  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo" class="project-vue">
     <template v-slot:summaryImage>
       <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
     </template>
@@ -22,7 +22,7 @@
     </template>
 
     <template v-slot:demo>
-      <vuelogo/>
+      <vuelogo />
     </template>
 
     <template v-slot:demoDetails>
@@ -30,8 +30,8 @@
         My experience with Vue so far has been completely positive, unlike my experience with
         AngularJS which could have been better. I suspected that the documentation for AngularJS was
         bad but it wasn't until I dove into Vue that I realized what I was missing. The best way to
-        read AngularJS documentation is to ignore it completely and use stackoverflow. I found it way
-        too complex for describing simple concepts. It also uses other AngularJS terms to define
+        read AngularJS documentation is to ignore it completely and use stackoverflow. I found it
+        way too complex for describing simple concepts. It also uses other AngularJS terms to define
         something. So You almost need an understanding of everything else to understand one thing.
       </p>
       <p>

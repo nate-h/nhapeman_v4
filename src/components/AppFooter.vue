@@ -12,7 +12,7 @@
         <img alt="linkedin logo" src="@/assets/linkedin.svg" />
       </SVGLink>
       <SVGLink link="https://github.com/nate-h" light>
-        <img alt="linkedin logo" src="@/assets/github.svg" />
+        <img alt="github logo" src="@/assets/github.svg" />
       </SVGLink>
     </div>
   </footer>

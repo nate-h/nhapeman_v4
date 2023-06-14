@@ -1,5 +1,5 @@
 <template>
-  <ProjectCard title="title" description="description" moreInfo="moreInfo">
+  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo">
     <template v-slot:summaryImage>
       <img src="@/assets/recordName.png" />
     </template>
@@ -31,14 +31,14 @@
       <p>
         I created this media player for the soul purpose of having greater management over my music.
         The layout and functionality is similar to iTunes but it has some additional features like
-        hotkeys for inserting songs into playlists or checkmarks to see which playlist a song is in.
-        Speed was a big concern while implementing this media player. When a user adds music to the
-        library, all the information for each song is calculated only once (not each time myTunes
-        start) then stored in a hashmap that way I can access information in constant time. Also, I
-        do not copy the songs to a folder, rather I copy the address then load it when the user
-        wants to play. Lastly, when I save the information, I serialize it that way it loads fast.
-        Two of the most difficult things to implement were the regex filter for the search bar and
-        the multi-threading for playing the sound.
+        hotkeys for inserting songs into playlists or check marks to see which playlist a song is
+        in. Speed was a big concern while implementing this media player. When a user adds music to
+        the library, all the information for each song is calculated only once (not each time
+        myTunes start) then stored in a hashmap that way I can access information in constant time.
+        Also, I do not copy the songs to a folder, rather I copy the address then load it when the
+        user wants to play. Lastly, when I save the information, I serialize it that way it loads
+        fast. Two of the most difficult things to implement were the regex filter for the search bar
+        and the multi-threading for playing the sound.
       </p>
     </template>
   </ProjectCard>
@@ -46,6 +46,6 @@
 
 <script setup lang="ts">
 const title = 'MyTunes: a music player'
-const description = 'Java and JavaZOOM'
+const description = 'Java, JavaZOOM'
 const moreInfo = 'Demo'
 </script>

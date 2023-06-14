@@ -1,7 +1,21 @@
 <template>
   <div class="project-card">
-    <!-- Summary -->
-    <div class="summary-template" v-if="showSummary()">
+    <!-- Full View -->
+    <div class="demo-template t-to-b" v-if="showAll()">
+      <div class="header">
+        <h1 class="title">{{ title }}</h1>
+        <span class="description">{{ description }}</span>
+      </div>
+      <div class="demo">
+        <slot name="demo"></slot>
+      </div>
+      <div class="text">
+        <slot name="summaryText"></slot>
+        <slot name="demoDetails"></slot>
+      </div>
+    </div>
+    <!-- Shorter Summary -->
+    <div class="summary-template" v-else>
       <div class="summary-image">
         <RouterLink :to="'/projects/' + path" class="link" v-if="path">
           <slot name="summaryImage" class="thumbnail"></slot>
@@ -23,60 +37,23 @@
         </h2>
       </div>
     </div>
-
-    <!-- Demo -->
-    <div class="demo-template t-to-b" v-if="showDemo()">
-      <div class="header">
-        <h1 class="title">{{ title }}</h1>
-        <span class="description">{{ description }}</span>
-      </div>
-      <div class="demo">
-        <slot name="demo"></slot>
-      </div>
-      <div class="text">
-        <slot name="summaryText"></slot>
-        <slot name="demoDetails"></slot>
-      </div>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 
-
 defineProps<{
-  title: string,
-  description: string,
+  title: string
+  description: string
   moreInfo: string
 }>()
 
 const route = useRoute()
 
-
-function showSummary() {
-  return route.path !== "/projects"
+function showAll() {
+  return route.path !== '/projects'
 }
-function showDemo() {
-  return route.path === "/projects"
-}
-
-function created() {
-  let neededOptions = ['name', 'path', 'listed']
-  for (const prop of neededOptions) {
-    if (this.$parent.$options[prop] === null || this.$parent.$options[prop] === undefined) {
-      console.error(`Need to override ${prop}`)
-    }
-  }
-
-  let neededOverrides = ['title', 'description', 'moreInfo']
-  for (let prop of neededOverrides) {
-    if (this.$parent[prop] === null || this.$parent[prop] === undefined) {
-      console.error(`Need to override ${prop}`)
-    }
-  }
-}
-
 </script>
 
 <style lang="scss">
