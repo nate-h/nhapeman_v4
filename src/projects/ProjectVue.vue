@@ -81,6 +81,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 //import VueSiteSetup from "raw-loader!@/assets/text/VueSiteSetup.txt";
 const title = 'My thoughts on learning Vue'
 const description = 'Vue, Sass'

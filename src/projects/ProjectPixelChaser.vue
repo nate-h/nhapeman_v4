@@ -34,6 +34,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 const title = 'Pixel Chaser'
 const description = 'Javascript'
 const moreInfo = 'Demo'

@@ -45,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 const title = 'MyTunes: a music player'
 const description = 'Java, JavaZOOM'
 const moreInfo = 'Demo'

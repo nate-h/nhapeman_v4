@@ -81,6 +81,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 const title = 'Whirling: an AI-driven audio visualizer'
 const description = 'Librosa, OpenGL, Python, Spleeter'
 const moreInfo = 'Demo'

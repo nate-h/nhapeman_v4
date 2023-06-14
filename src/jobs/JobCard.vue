@@ -1,29 +1,25 @@
 <template>
-  <div class="job-container l-to-r lt">
-    <!-- Content inserted here! -->
-    <div class="left">
-      <img :src="getImageUrl(img)" />
-    </div>
-    <div class="right">
+  <section class="job-container">
+    <img :src="getImageUrl(img)" />
+    <div>
       <h2>
         <a :href="link">{{ company }}</a>
         <small class="date right">{{ years }}</small>
       </h2>
-
       <h3>{{ shortDescription }}</h3>
       <p>
         <slot></slot>
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 const getImageUrl = (name: string) => {
-  return new URL(props.img, import.meta.url).href
+  return new URL(name, import.meta.url).href
 }
 
-const props = defineProps<{
+defineProps<{
   company: string
   img: string
   link: string
@@ -34,28 +30,23 @@ const props = defineProps<{
 
 <style lang="scss">
 @import '../scss/main.scss';
-$img-side: 200px;
 
 .job-container {
-  .left {
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-right: $padding-large;
-    width: $img-side;
+  display: flex;
+  align-items: start;
+  gap: 2em;
+
+  > div {
+    width: 100%;
   }
 
-  .right {
-    flex-grow: 1;
-
-    .date {
-      margin-left: $margin-large;
+  h2 small {
+    margin-left: $margin-large;
       color: $dark3;
-    }
   }
 
-  img:first-of-type {
-    height: 200px;
-    width: 200px;
+  img {
+    width: 100px;
   }
 }
 

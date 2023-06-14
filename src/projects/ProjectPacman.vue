@@ -35,7 +35,7 @@
         the original two dimensional array map into a graph. The ghost can then navigate through the
         map using the nodes as reference points. They can use these nodes to move towards Pacman by
         checking which node Pacman is going towards, or to move around the map randomly. The orange
-        ghost in the original Pacman moves this way but most peope don't notice since they are
+        ghost in the original Pacman moves this way but most people don't notice since they are
         trying to survive. Now to get each ghost to move towards Pacman I used Dijkstra's algorithm
         to compute the fastest path.
       </p>
@@ -44,6 +44,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 const title = 'Pacman Remake'
 const description = 'Javascript'
 const moreInfo = 'Play'

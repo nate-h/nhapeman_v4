@@ -30,6 +30,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 const title = 'Minesweeper Remake'
 const description = 'Javascript'
 const moreInfo = 'Play'

@@ -35,6 +35,7 @@
 </template>
 
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue'
 const title = 'Super Mario Bros Reloaded'
 const description = 'C++ with SDL'
 const moreInfo = 'Demo'

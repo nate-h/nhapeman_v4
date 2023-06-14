@@ -14,68 +14,25 @@
     <!-- Links -->
     <div class="link-holder l-to-r">
       <div v-for="link in routes" :key="link.name">
-        <!-- Routes with dropsdown -->
-        <div class="dropdown" v-if="hasChildren(link)">
-          <div class="label">
-            <RouterLink class="router-link" :to="link.path">
-              <span>{{ link.name }}</span>
-              <arrow-svg />
-            </RouterLink>
-          </div>
-
-          <!-- Drop down list of children. -->
-          <div class="list">
-            <RouterLink
-              class="router-link"
-              v-for="child in link['children']"
-              :to="link.path + '/' + child.path"
-              :key="child.name"
-            >
-              <span>{{ child.name }}</span>
-            </RouterLink>
-          </div>
-        </div>
-
-        <!-- Routes without dropsdown -->
-        <RouterLink class="router-link" :to="link.path" v-if="!hasChildren(link)">
+        <RouterLink class="router-link" :to="link.path">
           <span>{{ link.name }}</span>
         </RouterLink>
       </div>
     </div>
+
+    <SVGLink link="https://www.linkedin.com/in/nhapeman/" light>
+      <img alt="linkedin logo" src="@/assets/linkedin.svg" />
+    </SVGLink>
+    <SVGLink link="https://github.com/nate-h" light>
+      <img alt="github logo" src="@/assets/github.svg" />
+    </SVGLink>
   </header>
 </template>
 
-<script lang="ts">
-import arrowSvg from '@/assets/arrow.svg'
-import { RouterLink, RouterView } from 'vue-router'
+<script lang="ts" setup>
+import { RouterLink, RouterView, useRouter } from 'vue-router'
 
-export default {
-  name: 'NavBar',
-  data() {
-    return {
-      routes: {}
-    }
-  },
-  props: [],
-  methods: {
-    hasChildren(link) {
-      return 'children' in link && link.children.length > 0
-    }
-  },
-  watch: {},
-  created() {
-    // Setup routes and remove children that aren't listed.
-    this.routes = this.$router.options.routes
-    for (const route of this.routes) {
-      if (Array.isArray(route.children)) {
-        route.children = route.children.filter((route) => route.listed === true)
-      }
-    }
-  },
-  components: {
-    arrowSvg
-  }
-}
+const routes = useRouter().options.routes
 </script>
 
 <style lang="scss">
