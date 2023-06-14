@@ -19,17 +19,17 @@
         <img src="@/assets/stitchedme.jpg" alt="pic-of-me" />
       </div>
       <div class="row">
-        <h2>Details</h2>
+        <h2>TL;DR</h2>
         <ul>
-          <li class="question">Name:</li>
-          <li class="answer">Nathanial Hapeman</li>
-          <li class="question">Age:</li>
-          <li class="answer">{{ my_rough_age() }}</li>
-          <li class="question">Location:</li>
-          <li class="answer">Los Angeles, CA</li>
-          <li class="question">Education:</li>
-          <li class="answer">UC Riverside</li>
-          <li class="answer">BS in Mechanical Engineering, minor in Computer Science</li>
+          <li>Name: <b>Nathanial Hapeman</b></li>
+          <li>Preferred Specialty: <b>Full Stack</b></li>
+          <li>Professional Experience: <b>{{ years_of_experience() }} years</b></li>
+          <li>Age: <b>{{ my_rough_age() }}</b></li>
+          <li>Location: <b>Los Angeles</b></li>
+
+          <li>Education:</li>
+          <li><b>UC Riverside</b></li>
+          <li><b>BS in Mech Engr, minor in Comp Sci</b></li>
         </ul>
       </div>
     </div>
@@ -69,14 +69,12 @@ function years_of_experience() {
       list-style: none;
 
       li {
-        &.question {
-          color: $dark2;
-          margin-top: $margin-small;
-        }
+        color: $dark2;
+        margin-left: auto;
 
-        &.answer {
+        b {
           color: $dark1;
-          font-weight: $fw-bold;
+          //font-weight: $fw-bold;
         }
       }
     }
