@@ -1,5 +1,5 @@
 <template>
-    <JobContainer
+    <JobCard
         company="FrackOptima"
         :img="'../assets/frackoptima.png'"
         link="http://frackoptima.com/"
@@ -13,9 +13,9 @@
           which make this all possible. Most of my work has been on the company website and the
           fracking simulator.
         </p>
-      </JobContainer>
+      </JobCard>
 </template>
 
 <script setup lang="ts">
-import JobContainer from '../components/Job.vue'
+import JobCard from './JobCard.vue'
 </script>

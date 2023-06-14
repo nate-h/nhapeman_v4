@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import JobFrackOptima from './JobFrackOptima.vue';
-import JobAppliedInvention from './JobAppliedInvention.vue'
-import JobHRL from './JobHRL.vue'
+import JobFrackOptima from '../jobs/JobFrackOptima.vue';
+import JobAppliedInvention from '../jobs/JobAppliedInvention.vue'
+import JobHRL from '../jobs/JobHRL.vue'
 import AboutMeContainer from '../components/AboutMe.vue'
 
 const links = [

@@ -1,5 +1,5 @@
 <template>
-    <JobContainer
+    <JobCard
         company="HRL"
         :img="'../assets/hrl_logo.png'"
         link="https://www.hrl.com/"
@@ -11,9 +11,9 @@
           <li>TS / SCI</li>
         </ul>
         <p></p>
-      </JobContainer>
+      </JobCard>
 </template>
 
 <script setup lang="ts">
-import JobContainer from '../components/Job.vue'
+import JobCard from './JobCard.vue'
 </script>

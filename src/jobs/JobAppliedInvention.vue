@@ -1,5 +1,5 @@
 <template>
-    <JobContainer
+    <JobCard
         company="Applied Invention"
         :img="'../assets/ai.png'"
         link="https://www.appliedinvention.com/"
@@ -22,9 +22,9 @@
           multi-stage data pipeline on all of our data, and analyzing our annotation data to find
           useful insights and to shape the direction when need to move it in.
         </p>
-      </JobContainer>
+      </JobCard>
 </template>
 
 <script setup lang="ts">
-import JobContainer from '../components/Job.vue'
+import JobCard from './JobCard.vue'
 </script>
