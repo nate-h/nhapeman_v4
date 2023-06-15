@@ -32,7 +32,6 @@
         <img alt="email logo" src="@/assets/email.svg" />
       </SVGLink>
     </div>
-
   </header>
 </template>
 

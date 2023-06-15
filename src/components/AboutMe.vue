@@ -1,10 +1,10 @@
 <template>
   <HeaderCard header="About Me">
     <div class="about-me-container">
-      <div class="row">
-        <h2>About Me</h2>
+      <div class="about">
+        <h2>Hello World!</h2>
         <p>
-          Hi! I'm Nathanial Hapeman and I am a professional software engineer. I've been programming
+          I'm Nathanial Hapeman and I am a professional software engineer. I've been programming
           professionally for
           {{ years_of_experience() }} years primarily as a full stack developer but have worked in
           other domains such as: simulation / game development, machine learning and data science.
@@ -15,16 +15,20 @@
           touch.
         </p>
       </div>
-      <div class="row">
-        <img src="@/assets/stitchedme.jpg" alt="pic-of-me" />
+      <div class="has-image">
+        <img src="@/assets/me.jpg" alt="pic-of-me" />
       </div>
-      <div class="row">
+      <div class="tldr">
         <h2>TL;DR</h2>
         <ul>
           <li>Name: <b>Nathanial Hapeman</b></li>
           <li>Preferred Specialty: <b>Full Stack</b></li>
-          <li>Professional Experience: <b>{{ years_of_experience() }} years</b></li>
-          <li>Age: <b>{{ my_rough_age() }}</b></li>
+          <li>
+            Professional Experience: <b>{{ years_of_experience() }} years</b>
+          </li>
+          <li>
+            Age: <b>{{ my_rough_age() }}</b>
+          </li>
           <li>Location: <b>Los Angeles</b></li>
           <li>Open to: <b>Remote or LA based</b></li>
           <li>Education:</li>
@@ -55,16 +59,18 @@ function years_of_experience() {
 <style lang="scss">
 @import '../scss/main.scss';
 .about-me-container {
-  @extend %l-to-r, .equal, .lt;
+  display: flex;
+  gap: 1em;
 
-  .row {
-    &:not(:first-child) {
-      margin-left: $margin;
+  .has-image {
+    width: 200px;
+    img {
+      border-radius: 3px;
     }
-    &:not(:last-child) {
-      margin-right: $margin;
-    }
+  }
 
+  .tldr {
+    flex: 1;
     ul {
       list-style: none;
 
@@ -74,10 +80,13 @@ function years_of_experience() {
 
         b {
           color: $dark1;
-          //font-weight: $fw-bold;
         }
       }
     }
+  }
+
+  .about {
+    flex: 1;
   }
 }
 

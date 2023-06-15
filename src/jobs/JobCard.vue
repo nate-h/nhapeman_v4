@@ -42,7 +42,7 @@ defineProps<{
 
   h2 small {
     margin-left: $margin-large;
-      color: $dark3;
+    color: $dark3;
   }
 
   img {
