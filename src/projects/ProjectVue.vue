@@ -1,9 +1,14 @@
 <template>
-  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo" class="project-vue">
+  <ProjectCard
+    title="My thoughts on learning Vue"
+    description="Vue, Sass"
+    :showMore="showMore"
+    class="project-vue"
+  >
+    <!-- Summary -->
     <template v-slot:summaryImage>
       <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
     </template>
-
     <template v-slot:summaryText>
       <p>
         I wrote this website you're viewing now using Vue and Sass as a learning experience. The
@@ -20,12 +25,11 @@
         cooler things Vue had to offer.
       </p>
     </template>
-
+    <!-- Full -->
     <template v-slot:demo>
-      <vuelogo />
+      <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
     </template>
-
-    <template v-slot:demoDetails>
+    <template v-slot:fullText>
       <p>
         My experience with Vue so far has been completely positive, unlike my experience with
         AngularJS which could have been better. I suspected that the documentation for AngularJS was
@@ -83,9 +87,9 @@
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
 //import VueSiteSetup from "raw-loader!@/assets/text/VueSiteSetup.txt";
-const title = 'My thoughts on learning Vue'
-const description = 'Vue, Sass'
-const moreInfo = 'Read More'
+defineProps<{
+  showMore: boolean
+}>()
 </script>
 
 <style lang="scss">

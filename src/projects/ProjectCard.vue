@@ -1,59 +1,42 @@
 <template>
   <div class="project-card">
-    <!-- Full View -->
-    <div class="demo-template t-to-b" v-if="showAll()">
-      <div class="header">
-        <h1 class="title">{{ title }}</h1>
-        <span class="description">{{ description }}</span>
-      </div>
-      <div class="demo">
-        <slot name="demo"></slot>
-      </div>
-      <div class="text">
-        <slot name="summaryText"></slot>
-        <slot name="demoDetails"></slot>
-      </div>
-    </div>
-    <!-- Shorter Summary -->
-    <div class="summary-template" v-else>
+    <!-- Show Less -->
+    <div class="show-less" v-if="!showMore">
       <div class="summary-image">
-        <RouterLink :to="'/projects/' + path" class="link" v-if="path">
-          <slot name="summaryImage" class="thumbnail"></slot>
-        </RouterLink>
-        <slot name="summaryImage" class="thumbnail" v-if="!path"></slot>
+        <slot name="summaryImage" class="thumbnail"></slot>
       </div>
       <div class="summary-content">
-        <div class="header">
+        <header>
           <h1 class="title">{{ title }}</h1>
           <span class="description">{{ description }}</span>
-        </div>
+        </header>
         <div>
           <slot name="summaryText"></slot>
         </div>
-        <h2 class="footer">
-          <RouterLink :to="'/projects/' + path" class="link">
-            <span>{{ moreInfo }}</span>
-          </RouterLink>
-        </h2>
+      </div>
+    </div>
+    <!-- Show More -->
+    <div class="show-more" v-else>
+      <header>
+        <h1 class="title">{{ title }}</h1>
+        <span class="description">{{ description }}</span>
+      </header>
+      <div class="demo">
+        <slot name="demo"></slot>
+      </div>
+      <div class="full-text">
+        <slot name="fullText"></slot>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView, useRoute } from 'vue-router'
-
-defineProps<{
+const props = defineProps<{
   title: string
   description: string
-  moreInfo: string
+  showMore: boolean
 }>()
-
-const route = useRoute()
-
-function showAll() {
-  return route.path !== '/projects'
-}
 </script>
 
 <style lang="scss">
@@ -62,6 +45,7 @@ function showAll() {
 $img-side: 200px;
 
 .project-card {
+  border: 1px solid red;
   background-color: $light1;
   max-width: map-get($breakpoints, large);
   padding: $padding-x-large;
@@ -82,12 +66,21 @@ $img-side: 200px;
     }
   }
 
-  .footer {
-    margin: $margin 0;
-    @extend %default-size;
+  .show-more {
+    @extend %t-to-b, .lt;
+    margin: 0 $margin-xxx-large;
+
+    .header {
+      margin-bottom: $margin-large;
+    }
+
+    .text {
+      padding: $padding-x-large;
+      text-align: left;
+    }
   }
 
-  .summary-template {
+  .show-less {
     @extend %l-to-r, .lt;
 
     .summary-image {
@@ -115,19 +108,6 @@ $img-side: 200px;
       }
     }
   }
-
-  .demo-template {
-    margin: 0 $margin-xxx-large;
-
-    .header {
-      margin-bottom: $margin-large;
-    }
-
-    .text {
-      padding: $padding-x-large;
-      text-align: left;
-    }
-  }
 }
 
 @media screen and (max-width: $break-large) {
@@ -143,11 +123,11 @@ $img-side: 200px;
       }
     }
 
-    .summary-template {
+    .show-less {
       @include holder('t-to-b', 'lt', 'ca');
     }
 
-    .demo-template {
+    .show-more {
       margin: 0;
 
       .text {

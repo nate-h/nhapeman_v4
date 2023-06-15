@@ -9,12 +9,12 @@
     </HeaderCard>
 
     <HeaderCard header="Personal Projects">
-      <ProjectMario />
-      <ProjectMinesweeper />
-      <ProjectMyTunes />
-      <ProjectPacman />
-      <ProjectVue />
-      <ProjectWhirling />
+      <ProjectWhirling :showMore="false" />
+      <ProjectMario :showMore="false" />
+      <ProjectMyTunes :showMore="false" />
+      <ProjectVue :showMore="false" />
+      <ProjectMinesweeper :showMore="false" />
+      <ProjectPacman :showMore="false" />
     </HeaderCard>
   </div>
 </template>

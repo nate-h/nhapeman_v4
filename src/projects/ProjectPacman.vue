@@ -1,9 +1,9 @@
 <template>
-  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo">
+  <ProjectCard title="Pacman Remake" description="Javascript" :showMore="showMore">
+    <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/pacman.png" />
     </template>
-
     <template v-slot:summaryText>
       <p>
         I had some time to kill before I got my first job as a software developer. Decided to remake
@@ -11,7 +11,6 @@
         polished my knowledge of data structures and algorithms.
       </p>
     </template>
-
     <template v-slot:demo>
       <iframe
         src="https://nate-h.github.io/pacman_js/"
@@ -22,8 +21,8 @@
         style="width: 600px; height: 430px"
       ></iframe>
     </template>
-
-    <template v-slot:demoDetails>
+    <!-- Full -->
+    <template v-slot:fullText>
       <p>
         A lot of the fun I got from creating this game was in trying to optimize it. For instance,
         rather than rendering everything in the level each frame, I only rendered were the changes
@@ -45,7 +44,7 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-const title = 'Pacman Remake'
-const description = 'Javascript'
-const moreInfo = 'Play'
+defineProps<{
+  showMore: boolean
+}>()
 </script>

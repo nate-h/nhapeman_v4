@@ -1,9 +1,13 @@
 <template>
-  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo">
+  <ProjectCard
+    title="Whirling: an AI-driven audio visualizer"
+    description="Librosa, OpenGL, Python, Spleeter"
+    :showMore="showMore"
+  >
+    <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/whirling.png" />
     </template>
-
     <template v-slot:summaryText>
       <p>
         I built a music visualizer that tries to intelligently understand as much about the song
@@ -15,7 +19,7 @@
         exclusively.
       </p>
     </template>
-
+    <!-- Full -->
     <template v-slot:demo>
       <div style="position: relative; padding-top: 75%">
         <iframe
@@ -28,8 +32,7 @@
         </iframe>
       </div>
     </template>
-
-    <template v-slot:demoDetails>
+    <template v-slot:fullText>
       <p>
         I haven't worked extensively with python for GUI/game development so I decided to use pygame
         and opengl for creating the visualizer. I thought it would be a good learning experience to
@@ -82,9 +85,9 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-const title = 'Whirling: an AI-driven audio visualizer'
-const description = 'Librosa, OpenGL, Python, Spleeter'
-const moreInfo = 'Demo'
+defineProps<{
+  showMore: boolean
+}>()
 </script>
 
 <style lang="scss">

@@ -1,9 +1,9 @@
 <template>
-  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo">
+  <ProjectCard title="Pixel Chaser" description="Javascript" :showMore="showMore">
+    <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/pacman.png" />
     </template>
-
     <template v-slot:summaryText>
       <p>
         I had some time to kill before I got my first job as a software developer. Decided to remake
@@ -11,7 +11,7 @@
         polished my knowledge of data structures and algorithms.
       </p>
     </template>
-
+    <!-- Full -->
     <template v-slot:demo>
       <iframe
         src="https://nate-h.github.io/pacman_js/"
@@ -22,8 +22,7 @@
         style="width: 600px; height: 430px"
       ></iframe>
     </template>
-
-    <template v-slot:demoDetails>
+    <template v-slot:fullText>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aut consectetur quia,
         recusandae quod, debitis reprehenderit dolorum dolores inventore iusto ad blanditiis
@@ -35,7 +34,7 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-const title = 'Pixel Chaser'
-const description = 'Javascript'
-const moreInfo = 'Demo'
+defineProps<{
+  showMore: boolean
+}>()
 </script>

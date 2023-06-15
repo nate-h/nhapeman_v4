@@ -1,9 +1,9 @@
 <template>
-  <ProjectCard :title="title" :description="description" :moreInfo="moreInfo">
+  <ProjectCard title="MyTunes: a music player" description="Java, JavaZOOM" :showMore="showMore">
+    <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/recordName.png" />
     </template>
-
     <template v-slot:summaryText>
       <p>
         Before I got into streaming, I had a pretty big music collection. I was really into making
@@ -14,7 +14,7 @@
         filters, swing components
       </p>
     </template>
-
+    <!-- Full -->
     <template v-slot:demo>
       <div style="position: relative; padding-top: 56.25%">
         <iframe
@@ -26,8 +26,7 @@
         ></iframe>
       </div>
     </template>
-
-    <template v-slot:demoDetails>
+    <template v-slot:fullText>
       <p>
         I created this media player for the soul purpose of having greater management over my music.
         The layout and functionality is similar to iTunes but it has some additional features like
@@ -46,7 +45,7 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-const title = 'MyTunes: a music player'
-const description = 'Java, JavaZOOM'
-const moreInfo = 'Demo'
+defineProps<{
+  showMore: boolean
+}>()
 </script>
