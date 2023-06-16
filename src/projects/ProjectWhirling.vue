@@ -1,22 +1,17 @@
 <template>
   <ProjectCard
     title="Whirling: an AI-driven audio visualizer"
-    description="Librosa, OpenGL, Python, Spleeter"
+    description="Librosa, OpenGL, Python, Spleeter, NumPy"
     :showMore="showMore"
   >
     <!-- Summary -->
     <template v-slot:summaryImage>
-      <img src="@/assets/whirling.png" />
+      <img src="@/assets/tiled_whirling.png" />
     </template>
     <template v-slot:summaryText>
       <p>
-        I built a music visualizer that tries to intelligently understand as much about the song
-        that's playing so it could create a more representative visual. All songs played have to
-        undergo a two step preprocessing algorithm that runs a source separator and a feature
-        extractor on each of the generated sources. I use Spleeter and Librosa to do source
-        separation. Spleeter is able to separate the drums, vocals, bass and other for each track.
-        Librosa can separate the percussion and harmonics. For feature extracting, I use Librosa
-        exclusively.
+        A music visualizer that uses audio feature extraction and segmentation to create more
+        representative visuals.
       </p>
     </template>
     <!-- Full -->
@@ -33,6 +28,15 @@
       </div>
     </template>
     <template v-slot:fullText>
+      <p>
+        I built a music visualizer that tries to intelligently understand as much about the song
+        that's playing so it could create a more representative visual. All songs played have to
+        undergo a two step preprocessing algorithm that runs a source separator and a feature
+        extractor on each of the generated sources. I use Spleeter and Librosa to do source
+        separation. Spleeter is able to separate the drums, vocals, bass and other for each track.
+        Librosa can separate the percussion and harmonics. For feature extracting, I use Librosa
+        exclusively.
+      </p>
       <p>
         I haven't worked extensively with python for GUI/game development so I decided to use pygame
         and opengl for creating the visualizer. I thought it would be a good learning experience to

@@ -2,16 +2,13 @@
   <ProjectCard title="MyTunes: a music player" description="Java, JavaZOOM" :showMore="showMore">
     <!-- Summary -->
     <template v-slot:summaryImage>
-      <img src="@/assets/recordName.png" />
+      <img src="@/assets/mytunes.png" />
     </template>
     <template v-slot:summaryText>
       <p>
-        Before I got into streaming, I had a pretty big music collection. I was really into making
-        playlists but was frustrated at how iTunes didn't have the best UI for managing playlists.
-        Trying to improve my coding skills, I thought it would be fun to create my own version of
-        iTunes with some cool features for managing playlists. So I created MyTunes. In creating it,
-        I learned a good amount about multithread synchronization, object serialization, regex
-        filters, swing components
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto modi accusamus ipsa eos
+        libero. A earum sint quo quia, enim saepe cum architecto repellendus corporis sed. Quibusdam
+        officia perferendis similique.
       </p>
     </template>
     <!-- Full -->
@@ -27,6 +24,14 @@
       </div>
     </template>
     <template v-slot:fullText>
+      <p>
+        Before I got into streaming, I had a pretty big music collection. I was really into making
+        playlists but was frustrated at how iTunes didn't have the best UI for managing playlists.
+        Trying to improve my coding skills, I thought it would be fun to create my own version of
+        iTunes with some cool features for managing playlists. So I created MyTunes. In creating it,
+        I learned a good amount about multithread synchronization, object serialization, regex
+        filters, swing components
+      </p>
       <p>
         I created this media player for the soul purpose of having greater management over my music.
         The layout and functionality is similar to iTunes but it has some additional features like

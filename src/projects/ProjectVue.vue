@@ -11,6 +11,17 @@
     </template>
     <template v-slot:summaryText>
       <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo omnis aspernatur quia
+        quisquam iure esse labore, totam magnam ullam amet delectus numquam, ab tempora corporis
+        laborum rerum laudantium veniam? Maiores.
+      </p>
+    </template>
+    <!-- Full -->
+    <template v-slot:demo>
+      <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
+    </template>
+    <template v-slot:fullText>
+      <p>
         I wrote this website you're viewing now using Vue and Sass as a learning experience. The
         biggest thing I wanted to learn was Vue since I came from an AngularJS background. For this
         reason, I wrote most of it from scratch so I could learn the ins and outs of Vue.
@@ -24,12 +35,6 @@
         wherever possible. So while developing this website, I rewrote many things as I learned
         cooler things Vue had to offer.
       </p>
-    </template>
-    <!-- Full -->
-    <template v-slot:demo>
-      <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
-    </template>
-    <template v-slot:fullText>
       <p>
         My experience with Vue so far has been completely positive, unlike my experience with
         AngularJS which could have been better. I suspected that the documentation for AngularJS was

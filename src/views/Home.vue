@@ -8,7 +8,7 @@
       <JobFrackOptima />
     </HeaderCard>
 
-    <HeaderCard header="Personal Projects">
+    <HeaderCard header="Personal Projects" class="projects">
       <ProjectWhirling :showMore="false" />
       <ProjectMario :showMore="false" />
       <ProjectMyTunes :showMore="false" />
@@ -30,12 +30,6 @@ import ProjectMyTunes from '@/projects/ProjectMyTunes.vue'
 import ProjectPacman from '@/projects/ProjectPacman.vue'
 import ProjectVue from '@/projects/ProjectVue.vue'
 import ProjectWhirling from '@/projects/ProjectWhirling.vue'
-
-const links = [
-  { name: 'About Me', link: 'aboutme' },
-  { name: 'Job History', link: 'jobhistory' },
-  { name: 'Projects', link: 'projects' }
-]
 </script>
 
 <style lang="scss">
@@ -57,6 +51,15 @@ const links = [
 
   ul {
     list-style-position: inside;
+  }
+}
+
+.projects .body {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex: 33%;
   }
 }
 
