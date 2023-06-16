@@ -4,7 +4,7 @@
     :img="'../assets/frackoptima.png'"
     link="http://frackoptima.com/"
     years="May 2016 - October 2017"
-    short-description="Software Engineer"
+    short-description="Full Stack"
   >
     <p>
       I worked part-time at FrackOptima as a software engineer while working full-time for Applied

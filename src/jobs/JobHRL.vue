@@ -4,7 +4,7 @@
     :img="'../assets/hrl.png'"
     link="https://www.hrl.com/"
     years="July 2021 - Present"
-    short-description="Software Engineer"
+    short-description="Full Stack"
   >
     <ul>
       <li>Full Stack engineering on a quantum device testing program</li>
