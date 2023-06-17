@@ -6,9 +6,9 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam consequatur asperiores,
-        aliquam necessitatibus sequi esse veritatis deleniti ducimus cum. Temporibus aut quis libero
-        molestiae minima explicabo corporis? Eius, minus eos!
+        Minesweeper was one of the first games I remade as a programmer. Never played the game too
+        much but thought it would be fun to recreate and more importantly achievable. Brace yourself
+        for the sound effects :D
       </p>
     </template>
     <!-- Full -->
@@ -25,8 +25,8 @@
     <template v-slot:fullText>
       <p>
         Minesweeper was one of the first games I remade as a programmer. Never played the game too
-        much but thought it would be fun to recreate and more importantly achievable. Fair warning
-        the sound effects can be jarring.
+        much but thought it would be fun to recreate and more importantly achievable. Brace yourself
+        for the sound effects :D
       </p>
     </template>
   </ProjectCard>

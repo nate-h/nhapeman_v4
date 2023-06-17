@@ -11,7 +11,8 @@
     <template v-slot:summaryText>
       <p>
         A music visualizer that uses audio feature extraction and segmentation to create more
-        representative visuals.
+        representative visuals. Built from scratch and heavily optimized so it
+        could run near 60fps while using python ;)
       </p>
     </template>
     <!-- Full -->

@@ -6,9 +6,9 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aliquid fuga. Mollitia
-        ex expedita asperiores possimus omnis explicabo unde consequatur modi, voluptas eaque
-        placeat numquam soluta cumque laudantium molestiae id!
+        Core features of Super Mario Bros with some slight quirks.
+        Built using c++ and SDL before I got my first job in computer programming.
+        Learned a ton about OOP while creating this among other things.
       </p>
     </template>
     <!-- Full -->

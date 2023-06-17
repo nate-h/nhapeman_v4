@@ -6,9 +6,8 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto modi accusamus ipsa eos
-        libero. A earum sint quo quia, enim saepe cum architecto repellendus corporis sed. Quibusdam
-        officia perferendis similique.
+        A simple music player that made it a breeze to create playlists. The
+        first and only program I wrote in Java to this day.
       </p>
     </template>
     <!-- Full -->

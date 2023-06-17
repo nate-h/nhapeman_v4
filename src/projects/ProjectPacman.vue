@@ -6,9 +6,8 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        I had some time to kill before I got my first job as a software developer. Decided to remake
-        Pacman in Javascript for fun. As a side effect, I improved my skills as a game developer and
-        polished my knowledge of data structures and algorithms.
+        Remake of the basics of Pacman. Funnest part was using Dijkstra's algorithm
+        for some of the ghosts. Other ghosts move randomly.
       </p>
     </template>
     <template v-slot:demo>
