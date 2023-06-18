@@ -9,6 +9,8 @@
     </HeaderCard>
 
     <HeaderCard header="Personal Projects" class="projects">
+      <ProjectFunWithReact :showMore="false" />
+      <ProjectImageEffects :showMore="false" />
       <ProjectWhirling :showMore="false" />
       <ProjectMario :showMore="false" />
       <ProjectMyTunes :showMore="false" />
@@ -24,6 +26,8 @@ import AboutMeContainer from '../components/AboutMe.vue'
 import JobFrackOptima from '../jobs/JobFrackOptima.vue'
 import JobAppliedInvention from '../jobs/JobAppliedInvention.vue'
 import JobHRL from '../jobs/JobHRL.vue'
+import ProjectFunWithReact from '@/projects/ProjectFunWithReact.vue'
+import ProjectImageEffects from '@/projects/ProjectImageEffects.vue'
 import ProjectMario from '@/projects/ProjectMario.vue'
 import ProjectMinesweeper from '@/projects/ProjectMinesweeper.vue'
 import ProjectMyTunes from '@/projects/ProjectMyTunes.vue'
@@ -60,6 +64,7 @@ import ProjectWhirling from '@/projects/ProjectWhirling.vue'
 
   > * {
     flex: 33%;
+    flex-grow: 0;
   }
 }
 
