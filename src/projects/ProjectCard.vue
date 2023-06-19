@@ -1,11 +1,12 @@
 <template>
   <div class="project-card">
+    <div class="overlay" v-if="!showMore"></div>
     <!-- Show Less -->
     <div class="show-less" v-if="!showMore">
       <div class="summary-image">
         <slot name="summaryImage" class="thumbnail"></slot>
       </div>
-      <div class="summary-content">
+      <div>
         <header>
           <h1>{{ title }}</h1>
           <h2>{{ description }}</h2>
@@ -32,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title: string
   description: string
   showMore: boolean
@@ -48,6 +49,23 @@ $img-side: 200px;
   background-color: $light1;
   padding: 1rem;
   width: 100%;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 
   .show-more {
     @extend %t-to-b, .lt;

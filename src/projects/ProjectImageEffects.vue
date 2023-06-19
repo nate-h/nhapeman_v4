@@ -1,14 +1,17 @@
 <template>
-  <ProjectCard title="Image Effects" description="Python, OpenCV, Jupyter, NumPy, Matplotlib" :showMore="showMore">
+  <ProjectCard
+    title="Image Effects"
+    description="Python, OpenCV, Jupyter, NumPy, Matplotlib"
+    :showMore="showMore"
+  >
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/image-effects.png" />
     </template>
     <template v-slot:summaryText>
       <p>
-        A Jupyter notebook that contains a couple dozen image transformations,
-        some recreating trivial Photoshop effects and others just having fun
-        with OpenCV.
+        A Jupyter notebook that contains a couple dozen image transformations, some recreating
+        trivial Photoshop effects and others just having fun with OpenCV.
       </p>
     </template>
     <!-- Full -->
@@ -24,9 +27,7 @@
       </div>
     </template>
     <template v-slot:fullText>
-      <p>
-        TODO
-      </p>
+      <p>TODO</p>
     </template>
   </ProjectCard>
 </template>

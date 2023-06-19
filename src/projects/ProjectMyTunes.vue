@@ -6,8 +6,8 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        A simple music player that made it a breeze to create playlists. The
-        first and only program I wrote in Java to this day.
+        A simple music player that made it a breeze to create playlists. The first and only program
+        I wrote in Java to this day.
       </p>
     </template>
     <!-- Full -->

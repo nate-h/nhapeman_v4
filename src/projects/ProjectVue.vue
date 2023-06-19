@@ -11,9 +11,9 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        This is the fourth major rewrite of my personal website but second version
-        written in Vue. Coming from an Angular background, I picked up Vue pretty
-        easily. Here are my thoughts on comparing the two frameworks.
+        This is the fourth major rewrite of my personal website but second version written in Vue.
+        Coming from an Angular background, I picked up Vue pretty easily. Here are my thoughts on
+        comparing the two frameworks.
       </p>
     </template>
     <!-- Full -->

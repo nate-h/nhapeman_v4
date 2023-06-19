@@ -6,8 +6,8 @@
     </template>
     <template v-slot:summaryText>
       <p>
-        Remake of the basics of Pacman. Funnest part was using Dijkstra's algorithm
-        for some of the ghosts. Other ghosts move randomly.
+        Remake of the basics of Pacman. Funnest part was using Dijkstra's algorithm for some of the
+        ghosts. Other ghosts move randomly.
       </p>
     </template>
     <template v-slot:demo>
