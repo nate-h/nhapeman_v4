@@ -1,8 +1,8 @@
 <template>
   <div class="project-card">
-    <div class="overlay" v-if="!showMore"></div>
+    <div class="overlay"></div>
     <!-- Show Less -->
-    <div class="show-less" v-if="!showMore">
+    <div class="show-less">
       <div class="summary-image">
         <slot name="summaryImage" class="thumbnail"></slot>
       </div>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <!-- Show More -->
-    <div class="show-more" v-else>
+    <div class="show-more" v-if="false">
       <header>
         <h1 class="title">{{ title }}</h1>
         <span class="description">{{ description }}</span>
@@ -36,7 +36,6 @@
 defineProps<{
   title: string
   description: string
-  showMore: boolean
 }>()
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <ProjectCard title="Pixel Chaser" description="Javascript" :showMore="showMore">
+  <ProjectCard title="Pixel Chaser" description="Javascript">
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/pacman.png" />
@@ -34,7 +34,4 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-defineProps<{
-  showMore: boolean
-}>()
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <ProjectCard title="MyTunes: a music player" description="Java, JavaZOOM" :showMore="showMore">
+  <ProjectCard title="MyTunes: a music player" description="Java, JavaZOOM">
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/mytunes.png" />
@@ -49,7 +49,4 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-defineProps<{
-  showMore: boolean
-}>()
 </script>

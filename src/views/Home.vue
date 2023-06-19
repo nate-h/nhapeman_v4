@@ -9,14 +9,14 @@
     </HeaderCard>
 
     <HeaderCard header="Personal Projects" class="projects">
-      <ProjectFunWithReact :showMore="false" />
-      <ProjectImageEffects :showMore="false" />
-      <ProjectWhirling :showMore="false" />
-      <ProjectMario :showMore="false" />
-      <ProjectMyTunes :showMore="false" />
-      <ProjectVue :showMore="false" />
-      <ProjectMinesweeper :showMore="false" />
-      <ProjectPacman :showMore="false" />
+      <ProjectFunWithReact />
+      <ProjectImageEffects />
+      <ProjectWhirling />
+      <ProjectMario />
+      <ProjectMyTunes />
+      <ProjectVue />
+      <ProjectMinesweeper />
+      <ProjectPacman />
     </HeaderCard>
   </div>
 </template>

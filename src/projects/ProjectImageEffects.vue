@@ -2,7 +2,6 @@
   <ProjectCard
     title="Image Effects"
     description="Python, OpenCV, Jupyter, NumPy, Matplotlib"
-    :showMore="showMore"
   >
     <!-- Summary -->
     <template v-slot:summaryImage>
@@ -34,7 +33,4 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-defineProps<{
-  showMore: boolean
-}>()
 </script>

@@ -2,7 +2,6 @@
   <ProjectCard
     title="Whirling: an AI-driven audio visualizer"
     description="Librosa, OpenGL, Python, Spleeter, NumPy"
-    :showMore="showMore"
   >
     <!-- Summary -->
     <template v-slot:summaryImage>
@@ -90,9 +89,6 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-defineProps<{
-  showMore: boolean
-}>()
 </script>
 
 <style lang="scss">

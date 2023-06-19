@@ -2,7 +2,6 @@
   <ProjectCard
     title="Fun with React"
     description="React, TypeScript, Sass, clsx"
-    :showMore="showMore"
   >
     <!-- Summary -->
     <template v-slot:summaryImage>
@@ -31,7 +30,4 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-defineProps<{
-  showMore: boolean
-}>()
 </script>

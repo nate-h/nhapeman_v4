@@ -1,5 +1,5 @@
 <template>
-  <ProjectCard title="Super Mario Bros Reloaded" description="C++ with SDL" :showMore="showMore">
+  <ProjectCard title="Super Mario Bros Reloaded" description="C++ with SDL">
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/mario.jpg" />
@@ -39,7 +39,4 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
-defineProps<{
-  showMore: boolean
-}>()
 </script>

@@ -2,7 +2,6 @@
   <ProjectCard
     title="My thoughts on learning Vue"
     description="Vue, Sass"
-    :showMore="showMore"
     class="project-vue"
   >
     <!-- Summary -->
@@ -92,9 +91,6 @@
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
 //import VueSiteSetup from "raw-loader!@/assets/text/VueSiteSetup.txt";
-defineProps<{
-  showMore: boolean
-}>()
 </script>
 
 <style lang="scss">
