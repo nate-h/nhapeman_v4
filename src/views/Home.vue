@@ -9,9 +9,9 @@
     </HeaderCard>
 
     <HeaderCard header="Personal Projects" class="projects">
-      <ProjectFunWithReact />
       <ProjectImageEffects />
       <ProjectWhirling />
+      <ProjectFunWithReact />
       <ProjectMario />
       <ProjectMyTunes />
       <ProjectVue />

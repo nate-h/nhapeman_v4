@@ -17,7 +17,7 @@
       <header>
         <h1 class="title">{{ title }}</h1>
         <h2>{{ description }}</h2>
-        <button class="close" @click="showModal = false">✖</button>
+        <button class="close" @click="showModal = false">✕</button>
       </header>
       <div class="demo">
         <slot name="demo"></slot>
@@ -104,35 +104,55 @@ watch(showModal, async (latestShowModel, _oldVal) => {
 }
 
 .modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(200, 200, 200, 0.3);
   inset: 0;
   z-index: 1000;
   overflow: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .inner-modal {
-    width: 500px;
+    @extend %shadow;
+    width: 70%;
+    max-width: 1000px;
     background-color: white;
     display: flex;
     flex-direction: column;
+
+    margin-top: auto; // Need these for center aligning + height of child > parent.
+    margin-bottom: auto; // ^^^
 
     header {
       position: relative;
       background-color: black;
       padding: 1rem;
       .close {
-        top: 10px;
-        right: 10px;
+        top: 2rem;
+        right: 2rem;
         position: absolute;
         border: none;
         background: none;
         color: white;
-        font-size: 300%;
+        font-size: 200%;
         cursor: pointer;
       }
+    }
+
+    .demo {
+      display: flex;
+      justify-content: center;
+      > * {
+        margin: 1rem;
+        display: block;
+      }
+    }
+
+    .full-text {
+      padding: 1rem;
+      list-style: inside;
     }
   }
 }

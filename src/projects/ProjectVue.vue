@@ -1,19 +1,19 @@
 <template>
-  <ProjectCard title="My thoughts on learning Vue" description="Vue, Sass">
+  <ProjectCard title="My thoughts on learning Vue" description="Vue3, Sass, Typescript">
     <!-- Summary -->
     <template v-slot:summaryImage>
-      <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
+      <img alt="vue logo" src="@/assets/vuelogo.svg" />
     </template>
     <template v-slot:summaryText>
       <p>
         This is the fourth major rewrite of my personal website but second version written in Vue.
         Coming from an Angular background, I picked up Vue pretty easily. Here are my thoughts on
-        comparing the two frameworks.
+        the two frameworks.
       </p>
     </template>
     <!-- Full -->
     <template v-slot:demo>
-      <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
+      <img alt="vue logo" src="@/assets/vuelogo.svg" />
     </template>
     <template v-slot:fullText>
       <p>
@@ -89,6 +89,10 @@ import ProjectCard from './ProjectCard.vue'
 //import VueSiteSetup from "raw-loader!@/assets/text/VueSiteSetup.txt";
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../scss/main.scss';
+
+.demo img {
+  height: 200px;
+}
 </style>

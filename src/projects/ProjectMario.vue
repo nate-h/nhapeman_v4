@@ -7,21 +7,19 @@
     <template v-slot:summaryText>
       <p>
         Core features of Super Mario Bros with some slight quirks. Built using c++ and SDL before I
-        got my first job in computer programming. Learned a ton about OOP while creating this among
-        other things.
+        got my first job in computer programming. Learned a ton about OOP, threading and data
+        structures while creating this.
       </p>
     </template>
     <!-- Full -->
     <template v-slot:demo>
-      <div style="position: relative; padding-top: 56.25%">
-        <iframe
-          src="https://www.youtube.com/embed/EMslyjWIPGo"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-        ></iframe>
-      </div>
+      <iframe
+        src="https://www.youtube.com/embed/EMslyjWIPGo"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        style="width: 100%; height: 500px"
+      ></iframe>
     </template>
     <template v-slot:fullText>
       <p>

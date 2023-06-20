@@ -17,6 +17,7 @@ defineProps<{
 @import '../scss/main.scss';
 
 .header-card {
+  @extend %shadow;
   align-items: center;
   background-color: $light1;
   display: flex;

@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-//this.$store.commit("setLinks", this.links);
 </script>
 
 <style lang="scss">

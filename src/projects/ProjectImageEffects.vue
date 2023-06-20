@@ -12,18 +12,30 @@
     </template>
     <!-- Full -->
     <template v-slot:demo>
-      <div style="position: relative; padding-top: 56.25%">
-        <iframe
-          src="https://www.youtube.com/embed/EMslyjWIPGo"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-        ></iframe>
-      </div>
+      <img alt="image effects example" src="@/assets/image-effects-2.png" />
     </template>
     <template v-slot:fullText>
-      <p>TODO</p>
+      <div class="demo-text">
+        <p>
+          A
+          <a href="https://github.com/nate-h/image-effects/blob/main/run.ipynb"
+            >notebook containing</a
+          >
+          a couple dozen fun image transformations using mostly OpenCV and NumPy.
+        </p>
+        <p>
+          I love working with things I can see whether its: game development, frontend, or computer
+          vision problems. One of the first programs I created for fun was a
+          <a
+            href="https://www.mathworks.com/matlabcentral/fileexchange/35975-picture-letter-recognition-software"
+            >letter recognition software written in Matlab.</a
+          >
+          I've been lucky enough to work on some computer vision problems in my career but wanted to
+          take it slow and explore all the features OpenCV provides. This project was that. A
+          deliberate attempt of playing with OpenCV on a ton of small problems so I can learn more
+          of the basics OpenCV provides.
+        </p>
+      </div>
     </template>
   </ProjectCard>
 </template>
@@ -31,3 +43,11 @@
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
 </script>
+
+<style lang="scss" scoped>
+@import '../scss/main.scss';
+
+.demo img {
+  height: 400px;
+}
+</style>

@@ -16,20 +16,36 @@
     </template>
     <!-- Full -->
     <template v-slot:demo>
-      <div style="position: relative; padding-top: 75%">
-        <iframe
-          src="https://player.vimeo.com/video/454955980"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-        >
-        </iframe>
-      </div>
+      <iframe
+        src="https://player.vimeo.com/video/454955980"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        style="width: 100%; height: 500px"
+      >
+      </iframe>
     </template>
     <template v-slot:fullText>
       <p>
-        I built a music visualizer that tries to intelligently understand as much about the song
+        Code
+        <a href="https://github.com/nate-h/Whirling"> https://github.com/nate-h/Whirling</a>
+      </p>
+      <br>
+      <h2>TLDR - I built a music visualizer</h2>
+      <p>
+        The colors map to separated sources. <br />
+        Here's the key:
+      </p>
+      <ul>
+        <li style="color: green">Green -> vocals</li>
+        <li style="color: blue">Blue -> other (piano, guitar, etc.)</li>
+        <li style="color: red">Red -> Drums</li>
+        <li style="color: purple">Purple -> Bass</li>
+      </ul>
+      <br>
+      <h2>What is Whirling?</h2>
+      <p>
+        Whirling is a music visualizer that tries to intelligently understand as much about the song
         that's playing so it could create a more representative visual. All songs played have to
         undergo a two step preprocessing algorithm that runs a source separator and a feature
         extractor on each of the generated sources. I use Spleeter and Librosa to do source
@@ -37,6 +53,7 @@
         Librosa can separate the percussion and harmonics. For feature extracting, I use Librosa
         exclusively.
       </p>
+      <br>
       <p>
         I haven't worked extensively with python for GUI/game development so I decided to use pygame
         and opengl for creating the visualizer. I thought it would be a good learning experience to
@@ -68,21 +85,6 @@
           checkerboard: same as combo_board but with no use of features and much less filtering.
         </li>
       </ol>
-      <p>
-        Code
-        <a href="https://github.com/nate-h/Whirling"> https://github.com/nate-h/Whirling</a>
-      </p>
-      <h2>TLDR - I built a music visualizer</h2>
-      <p>
-        The colors map to separated sources. <br />
-        Here's the key:
-      </p>
-      <ul>
-        <li style="color: green">Green -> vocals</li>
-        <li style="color: blue">Blue -> other (piano, guitar, etc.)</li>
-        <li style="color: red">Red -> Drums</li>
-        <li style="color: purple">Purple -> Bass</li>
-      </ul>
     </template>
   </ProjectCard>
 </template>
@@ -91,7 +93,7 @@
 import ProjectCard from './ProjectCard.vue'
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../scss/main.scss';
 ul {
   list-style: none;
