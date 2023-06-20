@@ -1,8 +1,5 @@
 <template>
-  <ProjectCard
-    title="Fun with React"
-    description="React, TypeScript, Sass, clsx"
-  >
+  <ProjectCard title="Fun with React" description="React, TypeScript, Sass, clsx">
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/react_logo.png" />

@@ -1,9 +1,5 @@
 <template>
-  <ProjectCard
-    title="My thoughts on learning Vue"
-    description="Vue, Sass"
-    class="project-vue"
-  >
+  <ProjectCard title="My thoughts on learning Vue" description="Vue, Sass">
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img alt="linkedin logo" src="@/assets/vuelogo.svg" />
@@ -95,13 +91,4 @@ import ProjectCard from './ProjectCard.vue'
 
 <style lang="scss">
 @import '../scss/main.scss';
-
-.project-vue {
-  $vue-logo-side: 300px;
-  .demo {
-    svg {
-      height: $vue-logo-side;
-    }
-  }
-}
 </style>

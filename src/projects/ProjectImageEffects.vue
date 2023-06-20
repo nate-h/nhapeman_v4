@@ -1,8 +1,5 @@
 <template>
-  <ProjectCard
-    title="Image Effects"
-    description="Python, OpenCV, Jupyter, NumPy, Matplotlib"
-  >
+  <ProjectCard title="Image Effects" description="Python, OpenCV, Jupyter, NumPy, Matplotlib">
     <!-- Summary -->
     <template v-slot:summaryImage>
       <img src="@/assets/image-effects.png" />
