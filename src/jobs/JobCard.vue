@@ -1,6 +1,6 @@
 <template>
   <section class="job-container">
-    <slot name="image"></slot>
+    <a :href="link"><slot name="image"></slot></a>
     <div>
       <h2>
         <a :href="link">{{ company }}</a>

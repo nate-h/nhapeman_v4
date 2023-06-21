@@ -30,7 +30,7 @@
         Code
         <a href="https://github.com/nate-h/Whirling"> https://github.com/nate-h/Whirling</a>
       </p>
-      <br>
+      <br />
       <h2>TLDR - I built a music visualizer</h2>
       <p>
         The colors map to separated sources. <br />
@@ -42,7 +42,7 @@
         <li style="color: red">Red -> Drums</li>
         <li style="color: purple">Purple -> Bass</li>
       </ul>
-      <br>
+      <br />
       <h2>What is Whirling?</h2>
       <p>
         Whirling is a music visualizer that tries to intelligently understand as much about the song
@@ -53,7 +53,7 @@
         Librosa can separate the percussion and harmonics. For feature extracting, I use Librosa
         exclusively.
       </p>
-      <br>
+      <br />
       <p>
         I haven't worked extensively with python for GUI/game development so I decided to use pygame
         and opengl for creating the visualizer. I thought it would be a good learning experience to

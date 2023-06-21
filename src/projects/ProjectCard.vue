@@ -158,12 +158,8 @@ watch(showModal, async (latestShowModel, _oldVal) => {
 }
 
 @media screen and (max-width: $break-large) {
-  .ProjectCard {
-    padding: $padding-large;
-
-    .show-less {
-      @include holder('t-to-b', 'lt', 'ca');
-    }
+  .modal .inner-modal {
+    width: 90%;
   }
 }
 </style>

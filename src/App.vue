@@ -25,4 +25,12 @@ import AppHeader from './components/AppHeader.vue'
     margin-top: 65px;
   }
 }
+
+@media screen and (max-width: $break-large) {
+  #app {
+    .route-base {
+      margin-top: 12rem;
+    }
+  }
+}
 </style>

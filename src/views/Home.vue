@@ -72,5 +72,15 @@ import ProjectWhirling from '@/projects/ProjectWhirling.vue'
   .home {
     padding: $padding-large 0;
   }
+
+  .projects .body > * {
+    flex: 40%;
+  }
+}
+
+@media screen and (max-width: $break-medium) {
+  .projects .body > * {
+    flex: 100%;
+  }
 }
 </style>

@@ -6,7 +6,7 @@
     short-description="Full Stack, Simulation / Game Development, Machine Learning, Data Science"
   >
     <template v-slot:image>
-      <img  alt="Applied Invention logo" src="@/assets/applied_invention.png" />
+      <img alt="Applied Invention logo" src="@/assets/applied_invention.png" />
     </template>
     <p>
       In short, Applied Invention is a company that helps leading companies and entrepreneurs with

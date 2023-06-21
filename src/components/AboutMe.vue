@@ -92,10 +92,21 @@ function years_of_experience() {
 
 @media screen and (max-width: $break-large) {
   .about-me-container {
-    @include holder('t-to-b', 'lt');
+    flex-wrap: wrap;
 
-    .row:not(:last-child) {
-      margin-bottom: $margin-large;
+    > * {
+      flex: none;
+    }
+
+    .about {
+      flex-basis: 100%;
+    }
+
+    .has-image {
+      flex-basis: 40%;
+    }
+    .tldr {
+      flex-basis: 55%;
     }
   }
 }
