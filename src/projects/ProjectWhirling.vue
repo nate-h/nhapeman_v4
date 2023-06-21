@@ -98,4 +98,10 @@ import ProjectCard from './ProjectCard.vue'
 ul {
   list-style: none;
 }
+
+@media screen and (max-width: $break-small) {
+  iframe {
+    height: 400px !important;
+  }
+}
 </style>

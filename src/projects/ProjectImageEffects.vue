@@ -48,6 +48,6 @@ import ProjectCard from './ProjectCard.vue'
 @import '../scss/main.scss';
 
 .demo img {
-  height: 400px;
+  max-height: 400px;
 }
 </style>

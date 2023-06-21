@@ -38,3 +38,13 @@
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
 </script>
+
+<style lang="scss" scoped>
+@import '../scss/main.scss';
+
+@media screen and (max-width: $break-small) {
+  iframe {
+    height: 300px !important;
+  }
+}
+</style>

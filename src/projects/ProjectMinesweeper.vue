@@ -32,6 +32,6 @@
   </ProjectCard>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" scoped>
 import ProjectCard from './ProjectCard.vue'
 </script>

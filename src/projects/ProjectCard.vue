@@ -109,7 +109,7 @@ watch(showModal, async (latestShowModel, _oldVal) => {
   inset: 0;
   z-index: 1000;
   overflow: auto;
-  padding: 2rem;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,6 +160,12 @@ watch(showModal, async (latestShowModel, _oldVal) => {
 @media screen and (max-width: $break-large) {
   .modal .inner-modal {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: $break-medium) {
+  .modal .inner-modal {
+    width: 100%;
   }
 }
 </style>
