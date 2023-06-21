@@ -1,11 +1,13 @@
 <template>
   <JobCard
     company="Applied Invention"
-    :img="'../assets/applied_invention.png'"
     link="https://www.appliedinvention.com/"
     years="June 2014 - June 2021"
     short-description="Full Stack, Simulation / Game Development, Machine Learning, Data Science"
   >
+    <template v-slot:image>
+      <img  alt="Applied Invention logo" src="@/assets/applied_invention.png" />
+    </template>
     <p>
       In short, Applied Invention is a company that helps leading companies and entrepreneurs with
       any challenging problem they may have. I've been lucky enough to work for AI since they hired

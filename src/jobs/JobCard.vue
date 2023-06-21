@@ -1,6 +1,6 @@
 <template>
   <section class="job-container">
-    <img :src="getImageUrl(img)" />
+    <slot name="image"></slot>
     <div>
       <h2>
         <a :href="link">{{ company }}</a>
@@ -15,13 +15,8 @@
 </template>
 
 <script setup lang="ts">
-const getImageUrl = (name: string) => {
-  return new URL(name, import.meta.url).href
-}
-
 defineProps<{
   company: string
-  img: string
   link: string
   years: string
   shortDescription: string
