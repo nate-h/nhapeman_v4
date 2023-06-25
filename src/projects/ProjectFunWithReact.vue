@@ -16,14 +16,10 @@
     </template>
     <template v-slot:fullText>
       <p>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/nate-h/fun-with-react"
-          >fun-with-react</a
-        >
+        <a-ext link="https://github.com/nate-h/fun-with-react">fun-with-react</a-ext>
         is a collection of small React examples. Live example
 
-        <a target="_blank" rel="noopener noreferrer" href="https://nate-h.github.io/fun-with-react/"
-          >here</a
-        >.
+        <a-ext link="https://nate-h.github.io/fun-with-react/">here</a-ext>.
       </p>
       <br />
       <h2>Some quick thoughts on React coming from Vue</h2>

@@ -18,17 +18,17 @@
       <div class="demo-text">
         <p>
           A
-          <a href="https://github.com/nate-h/image-effects/blob/main/run.ipynb"
-            >notebook containing</a
+          <a-ext link="https://github.com/nate-h/image-effects/blob/main/run.ipynb"
+            >notebook containing</a-ext
           >
           a couple dozen fun image transformations using mostly OpenCV and NumPy.
         </p>
         <p>
           I love working with things I can see whether its: game development, frontend, or computer
           vision problems. One of the first programs I created for fun was a
-          <a
-            href="https://www.mathworks.com/matlabcentral/fileexchange/35975-picture-letter-recognition-software"
-            >letter recognition software written in Matlab.</a
+          <a-ext
+            link="https://www.mathworks.com/matlabcentral/fileexchange/35975-picture-letter-recognition-software"
+            >letter recognition software written in Matlab.</a-ext
           >
           I've been lucky enough to work on some computer vision problems in my career but wanted to
           take it slow and explore all the features OpenCV provides. This project was that. A

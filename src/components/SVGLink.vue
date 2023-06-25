@@ -1,7 +1,5 @@
 <template>
-  <a :href="link" class="svg-link" :class="{ light: light }">
-    <slot></slot>
-  </a>
+  <a-ext :link="link" class="svg-link" :class="{ light: light }"><slot></slot></a-ext>
 </template>
 
 <script setup lang="ts">

@@ -28,7 +28,7 @@
     <template v-slot:fullText>
       <p>
         Code
-        <a href="https://github.com/nate-h/Whirling"> https://github.com/nate-h/Whirling</a>
+        <a-ext link="https://github.com/nate-h/Whirling"> https://github.com/nate-h/Whirling</a-ext>
       </p>
       <br />
       <h2>TLDR - I built a music visualizer</h2>

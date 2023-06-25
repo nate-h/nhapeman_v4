@@ -1,9 +1,9 @@
 <template>
   <section class="job-container">
-    <a :href="link"><slot name="image"></slot></a>
+    <a-ext :link="link"><slot name="image"></slot></a-ext>
     <div>
       <h2>
-        <a :href="link">{{ company }}</a>
+        <a-ext :link="link">{{ company }}</a-ext>
         <small class="date right">{{ years }}</small>
       </h2>
       <h3>{{ shortDescription }}</h3>

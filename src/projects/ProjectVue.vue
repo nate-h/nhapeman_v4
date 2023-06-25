@@ -20,13 +20,13 @@
         I wrote this website you're viewing now using Vue and Sass as a learning experience. The
         biggest thing I wanted to learn was Vue since I came from an AngularJS background. For this
         reason, I wrote most of it from scratch so I could learn the ins and outs of Vue.
-        <a href="https://github.com/nate-h/nhapeman.com_v3"> Check out the code here! </a>
+        <a-ext link="https://github.com/nate-h/nhapeman.com_v3"> Check out the code here! </a-ext>
         In addition to wanting to learn Vue, I also wanted to take the time and learn some of things
         I didn't have time to learn on the job. As a software developer, you constantly have to
         fight deadlines and sadly this means you have to occasionally put aside learning something
         to meet a deadline. The last thing I hoped to learn while developing this website was new
         patterns from using the
-        <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a>
+        <a-ext link="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a-ext>
         wherever possible. So while developing this website, I rewrote many things as I learned
         cooler things Vue had to offer.
       </p>
@@ -46,8 +46,9 @@
         easy to learn because it's well designed and has documentation geared towards newbies. I
         think one of the reasons why Vue became the framework it is today is that it's mostly
         written by one dude,
-        <a href="https://twitter.com/youyuxi?lang=en">Evan You</a> so perhaps it doesn't suffer from
-        having <a href="https://www.youtube.com/watch?v=QrGrOK8oZG8">too many cooks</a>.
+        <a-ext link="https://twitter.com/youyuxi?lang=en">Evan You</a-ext> so perhaps it doesn't
+        suffer from having
+        <a-ext link="https://www.youtube.com/watch?v=QrGrOK8oZG8">too many cooks</a-ext>.
       </p>
       <p>
         Working with it so far, I find that it has a good balance of giving the developer some
@@ -64,7 +65,9 @@
       </p>
       <p>
         Another great feature Vue has is the ability to define a component in one file. These
-        <a href="https://vuejs.org/v2/guide/single-file-components.html"> single file components</a>
+        <a-ext link="https://vuejs.org/v2/guide/single-file-components.html">
+          single file components</a-ext
+        >
         simply have the Javascript, CSS, and HTML stuffed into 1 file as opposed to 3 separate
         files. The beauty of this feature is that developers are more incentivised to break up their
         code into smaller pieces. I find it annoying when you want to create a small component but
