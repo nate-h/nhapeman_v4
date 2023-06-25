@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { onUnmounted, ref, watch } from 'vue'
 
 defineProps<{
   title: string
@@ -45,7 +45,15 @@ function close(event: KeyboardEvent) {
   }
 }
 
+onUnmounted(() => {
+  onModalShow(false)
+})
+
 watch(showModal, async (latestShowModel, _oldVal) => {
+  onModalShow(latestShowModel)
+})
+
+function onModalShow(latestShowModel: boolean) {
   const body = document.querySelector('body')
   if (body?.style) {
     if (latestShowModel) {
@@ -56,7 +64,7 @@ watch(showModal, async (latestShowModel, _oldVal) => {
       document.removeEventListener('keyup', close)
     }
   }
-})
+}
 </script>
 
 <style lang="scss">
