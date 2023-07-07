@@ -1,7 +1,7 @@
 {
   "name": "nhapeman_v4",
   "version": "0.0.1",
-  "homepage": "https://nate-h.github.io/nhapeman_v4/",
+  "homepage": "https://nhapeman.com/",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
