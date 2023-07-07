@@ -1,6 +1,8 @@
 # nhapeman_v4
 
-Fourth version of my portfolio website.
+Fourth version of my portfolio website written from scratch using Vue3 + Sass.
+
+View website here: [nhapeman.com](https://nhapeman.com)
 
 ## Commands
 
