@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as o,a as t}from"./index-0f4df886.js";const c={},_={class:"resume"},r=t("iframe",{src:"https://drive.google.com/file/d/184Bg-YmVp4WCxtJPJvg0LpxFaC3OhvXT/preview",class:"pdf",frameBorder:"0",scrolling:"auto"},null,-1),a=[r];function n(l,d){return s(),o("div",_,a)}const m=e(c,[["render",n]]);export{m as default};
