@@ -1,11 +1,7 @@
 <template>
   <div class="resume">
-    <iframe
-      src="https://drive.google.com/file/d/184Bg-YmVp4WCxtJPJvg0LpxFaC3OhvXT/preview"
-      class="pdf"
-      frameBorder="0"
-      scrolling="auto"
-    ></iframe>
+    <iframe src="https://drive.google.com/file/d/1AFZIw1svApTUGUfAyW4PzXYiI-0ESZQc/preview" class="pdf" frameBorder="0"
+      scrolling="auto"></iframe>
   </div>
 </template>
 
@@ -13,6 +9,7 @@
 
 <style lang="scss">
 @import '../scss/main.scss';
+
 .resume {
   display: flex;
   width: 100%;
