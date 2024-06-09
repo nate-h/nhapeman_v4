@@ -1,7 +1,7 @@
 <template>
   <div class="resume">
     <iframe
-      src="https://drive.google.com/file/d/184Bg-YmVp4WCxtJPJvg0LpxFaC3OhvXT/preview"
+      src="https://drive.google.com/file/d/1dPxjQ3kOS0bORjg5x8Te-yNRe7FLYrRE/preview"
       class="pdf"
       frameBorder="0"
       scrolling="auto"
