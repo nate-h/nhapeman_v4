@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as o,a as t}from"./index-50edad41.js";const c={},r={class:"resume"},_=t("iframe",{src:"https://drive.google.com/file/d/1dPxjQ3kOS0bORjg5x8Te-yNRe7FLYrRE/preview",class:"pdf",frameBorder:"0",scrolling:"auto"},null,-1),a=[_];function n(d,l){return s(),o("div",r,a)}const f=e(c,[["render",n]]);export{f as default};
