@@ -1,16 +1,10 @@
 <template>
-  <JobCard
-    company="HRL"
-    link="https://www.hrl.com/"
-    years="July 2021 - Present"
-    short-description="Full Stack"
-  >
+  <JobCard company="HRL" link="https://www.hrl.com/" years="July 2021 - Present" short-description="Full Stack">
     <template v-slot:image>
       <img alt="hrl logo" src="@/assets/hrl.png" />
     </template>
     <ul>
       <li>Full Stack engineering on a quantum device testing program</li>
-      <li>TS / SCI</li>
     </ul>
     <p></p>
   </JobCard>
