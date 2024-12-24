@@ -1,6 +1,6 @@
 <template>
   <div class="resume">
-    <iframe src="https://drive.google.com/file/d/1AFZIw1svApTUGUfAyW4PzXYiI-0ESZQc/preview" class="pdf" frameBorder="0"
+    <iframe src="https://drive.google.com/file/d/15NaiHncg2eXANzogJ370LA4hchRCLEPl/preview" class="pdf" frameBorder="0"
       scrolling="auto"></iframe>
   </div>
 </template>
